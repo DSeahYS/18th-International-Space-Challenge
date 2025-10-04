@@ -1,0 +1,119 @@
+openapi: 3.0.3
+info:
+  title: AURA-Viz Data API
+  version: 1.0.0
+  description: API for streaming astronaut biometric data with simulation control
+
+servers:
+  - url: https://api.auraviz.com/v1
+    description: Production server
+
+paths:
+  /data/stream:
+    get:
+      summary: WebSocket stream for real-time biometric data
+      description: Establishes WebSocket connection for streaming vitals, waveforms, and alerts
+      responses:
+        101:
+          description: Switching Protocols (WebSocket upgrade)
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/DataMessage'
+        400:
+          description: Bad Request
+        401:
+          description: Unauthorized
+
+  /simulation/scenario:
+    post:
+      summary: Set simulation scenario
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              type: object
+              properties:
+                scenario:
+                  type: string
+                  enum: [baseline, cardiovascular_deconditioning, infection_onset, motion_sickness]
+              required:
+                - scenario
+      responses:
+        200:
+          description: Scenario activated
+        400:
+          description: Invalid scenario
+
+components:
+  schemas:
+    DataMessage:
+      type: object
+      properties:
+        type:
+          type: string
+          enum: [vitals, waveform, alert]
+        timestamp:
+          type: string
+          format: date-time
+        data:
+          oneOf:
+            - $ref: '#/components/schemas/VitalsData'
+            - $ref: '#/components/schemas/WaveformData'
+            - $ref: '#/components/schemas/AlertData'
+
+    VitalsData:
+      type: object
+      properties:
+        sensorId:
+          type: string
+          enum: ["19", "33", "4139", "4130", "49"]  # HR, BR, SpO2, Skin Temp, Accel
+        value:
+          type: number
+        status:
+          type: string
+          enum: [normal, warning, critical]
+
+    WaveformData:
+      type: object
+      properties:
+        sensorId:
+          type: string
+          enum: ["4113"]  # ECG
+        points:
+          type: array
+          items:
+            type: object
+            properties:
+              t:
+                type: number
+              v:
+                type: number
+        artifacts:
+          type: array
+          items:
+            type: object
+            properties:
+              start:
+                type: number
+              end:
+                type: number
+              type:
+                type: string
+
+    AlertData:
+      type: object
+      properties:
+        type:
+          type: string
+          enum: [hard_threshold, data_fusion]
+        severity:
+          type: string
+          enum: [warning, critical]
+        message:
+          type: string
+        triggeredSensors:
+          type: array
+          items:
+            type: string

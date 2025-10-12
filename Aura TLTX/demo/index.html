@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AURA Live-TX Demo</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <header>
+        <h1>AURA Live-TX Demo</h1>
+    </header>
+    <main>
+        <section class="control-panel">
+            <button id="record-btn">Record</button>
+            <canvas id="sound-wave" width="200" height="50"></canvas>
+            <div id="timer">00:00:00</div>
+            <select id="language-select">
+                <option value="zh">Mandarin</option>
+                <option value="es">Spanish</option>
+                <option value="en">English</option>
+                <option value="hi">Hindi</option>
+                <option value="ar">Arabic</option>
+                <option value="bn">Bengali</option>
+                <option value="pt">Portuguese</option>
+                <option value="ru" selected>Russian</option>
+                <option value="ja">Japanese</option>
+                <option value="de">German</option>
+            </select>
+        </section>
+        <section class="transcripts">
+            <div class="transcript-box" id="english-transcript">
+                <h2>English</h2>
+                <div class="transcript-content"></div>
+            </div>
+            <div class="transcript-box" id="dynamic-transcript">
+                <h2 id="dynamic-language">Russian</h2>
+                <div class="transcript-content"></div>
+            </div>
+        </section>
+        <section class="logs">
+            <h2>API Logs</h2>
+            <div id="logs-content"></div>
+        </section>
+    </main>
+    <footer>
+        <p>&copy; 2025 AURA Live-TX Demo</p>
+    </footer>
+    <script src="script.js"></script>
+</body>
+</html>

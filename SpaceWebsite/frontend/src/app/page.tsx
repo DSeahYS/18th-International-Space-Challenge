@@ -639,33 +639,34 @@ export default function Home() {
 
             <div className="flowchart-zoom-container overflow-hidden">
               <Flowchart chart={`graph TD
-              %% Data Sources
-              BIO[Biometric Sensors] --> AI_BRAIN[Sovereign AI Brain]
-              IMU[Motion Sensors] --> VPK[Embodied Kinematic Model]
-              CAM[Helmet Cameras] --> VPK
-              TEL[Telemetry Systems] --> AI_BRAIN
-              USER[User Input] --> AR_IF[Adaptive AR/XR Interface]
+               %% Data Sources
+               BIO[Biometric Sensors] --> BIO_MON[Biometric Monitoring]
+               IMU[Motion Sensors] --> VPK[Embodied Kinematic Model]
+               CAM[Helmet Cameras] --> VPK
+               TEL[Telemetry Systems] --> AI_BRAIN[Sovereign AI Brain]
+               USER[User Input] --> AR_IF[Adaptive AR/XR Interface]
 
-              %% Core Modules
-              VPK --> AI_BRAIN
-              VPK --> AR_IF
-              VPK --> ACE[ACE Module]
-              AI_BRAIN --> AR_IF
-              AI_BRAIN --> ACE
-              AI_BRAIN --> SUIT[Suit Adjustments]
+               %% Core Modules
+               BIO_MON --> AI_BRAIN
+               VPK --> AI_BRAIN
+               VPK --> AR_IF
+               VPK --> ACE[ACE Module]
+               AI_BRAIN --> AR_IF
+               AI_BRAIN --> ACE
+               AI_BRAIN --> SUIT[Suit Adjustments]
 
-              %% Outputs
-              AR_IF --> DISPLAY[AR Display]
-              AR_IF --> AI_BRAIN
-              ACE --> PARTS[Custom Parts]
-              ACE --> ALERTS[Alerts & Guidance]
+               %% Outputs
+               AR_IF --> DISPLAY[AR Display]
+               AR_IF --> AI_BRAIN
+               ACE --> PARTS[Custom Parts]
+               ACE --> ALERTS[Alerts & Guidance]
 
-              %% Styling
-              style AI_BRAIN fill:#e1f5fe
-              style AR_IF fill:#f3e5f5
-              style VPK fill:#e8f5e8
-              style BIO fill:#fff3e0
-              style ACE fill:#fce4ec`} />
+               %% Styling
+               style AI_BRAIN fill:#e1f5fe
+               style AR_IF fill:#f3e5f5
+               style VPK fill:#e8f5e8
+               style BIO_MON fill:#fff3e0
+               style ACE fill:#fce4ec`} />
             </div>
             <p className="text-sm text-gray-400 mt-4 text-center">
               Complete AURA system architecture showing all modules, components, and data flow relationships in a single comprehensive view.

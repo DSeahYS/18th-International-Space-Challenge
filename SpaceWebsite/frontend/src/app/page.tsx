@@ -834,6 +834,7 @@ export default function Home() {
                   <span className="text-xl font-semibold text-purple-300">117%</span>
                 </div>
               </div>
+<img src="/images/Space and Terrestrial Financial Projection.png" alt="Space and Terrestrial Financial Projection" className="mt-4 w-full h-auto" />
             </div>
             <div className="bg-slate-700 p-8 rounded-lg">
               <h3 className="text-2xl font-semibold mb-6 text-yellow-400">Legal/Ethical Notes</h3>
@@ -927,6 +928,7 @@ export default function Home() {
               </div>
             </div>
           </div>
+<img src="/images/Revenue and Investment Progression.png" alt="Revenue and Investment Progression" className="mt-4 w-full h-auto" />
         </div>
       </section>
 

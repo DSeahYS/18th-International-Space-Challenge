@@ -540,10 +540,10 @@ export default function Home() {
         {/* Content */}
         <div className="relative z-10">
           <h1 className="text-5xl md:text-7xl font-bold mb-6 bg-gradient-to-r from-blue-400 to-purple-600 bg-clip-text text-transparent">
-            Project AURA
+            Project AURA: Autonomous Unified Reality Augmentation
           </h1>
           <p className="text-xl md:text-2xl mb-8 max-w-2xl text-white drop-shadow-lg">
-            A symbiotic AI partner for deep space autonomy
+            THE ONBOARD AI THAT THINKS WITH YOU, NOT FOR YOU.
           </p>
           <div className="flex flex-col sm:flex-row gap-4 hero-buttons">
             <Link href="#vision" className="bg-blue-600 hover:bg-blue-700 px-8 py-3 rounded-lg font-semibold transition-colors text-center shadow-lg">
@@ -561,6 +561,9 @@ export default function Home() {
         <div className="max-w-4xl mx-auto text-center">
           <h2 className="text-4xl md:text-5xl font-bold mb-8">The Vision: Why Project AURA?</h2>
           <p className="text-lg md:text-xl leading-relaxed mb-6">
+            Project AURA is a conceptual, suit-integrated support ecosystem designed for astronauts on long-duration, deep space missions where significant communication latency with Earth makes real-time ground support impossible. The core objective is to create a symbiotic human-AI partner that enhances astronaut autonomy, safety, and operational effectiveness by providing a suite of integrated, locally-processed capabilities.
+          </p>
+          <p className="text-lg md:text-xl leading-relaxed">
             Long-duration deep space missions present unprecedented challenges. Communication with Earth can take hours or days due to vast distances, making real-time support impossible. Astronauts must operate with complete autonomy, relying on their training, equipment, and now, an intelligent AI companion.
           </p>
           <p className="text-lg md:text-xl leading-relaxed">
@@ -578,35 +581,35 @@ export default function Home() {
               <div className="bg-slate-800 p-6 rounded-lg text-center hover:bg-slate-700 transition-colors cursor-pointer">
                 <Brain className="w-12 h-12 mx-auto mb-4 text-blue-400" />
                 <h3 className="text-xl font-semibold mb-2">Sovereign AI Brain</h3>
-                <p className="text-gray-300">A multi-agent AI system operating offline, managing procedures, telemetry, navigation, and biometric interpretation.</p>
+                <p className="text-gray-300">The system requires a central, self-contained AI core that operates entirely offline. This AI must function as a multi-agent system, with specialized agents to manage and deliver mission procedures and technical manuals, monitor and analyze telemetry data from the suit and surrounding equipment for anomalies, provide real-time spatial mapping and navigational pathfinding, and interpret incoming biometric data to understand the astronaut's state.</p>
               </div>
             </Link>
             <Link href="/features/adaptive-ar-xr-visual-interface" className="block feature-card">
               <div className="bg-slate-800 p-6 rounded-lg text-center hover:bg-slate-700 transition-colors cursor-pointer">
                 <Eye className="w-12 h-12 mx-auto mb-4 text-green-400" />
-                <h3 className="text-xl font-semibold mb-2">Adaptive AR/XR Interface</h3>
-                <p className="text-gray-300">Helmet-integrated display with auto-dashboarding, voice guidance, and overlays for instructions and cues.</p>
+                <h3 className="text-xl font-semibold mb-2">Adaptive AR/XR Visual Interface</h3>
+                <p className="text-gray-300">The primary user interface should be an augmented reality display integrated into the astronaut's helmet. Key features must include an "Auto-Dashboarding" paradigm, where the UI dynamically adapts the amount and type of information displayed based on the astronaut's current task, location, and inferred physiological state (e.g., high stress), and interactive, voice-controlled procedural and navigational guidance, with the ability to overlay instructions, schematics, and directional cues directly onto the physical environment.</p>
               </div>
             </Link>
             <Link href="/features/closed-loop-biometric-monitoring" className="block feature-card">
               <div className="bg-slate-800 p-6 rounded-lg text-center hover:bg-slate-700 transition-colors cursor-pointer">
                 <Heart className="w-12 h-12 mx-auto mb-4 text-red-400" />
                 <h3 className="text-xl font-semibold mb-2">Closed-Loop Biometric Monitoring</h3>
-                <p className="text-gray-300">Real-time physiological data processing to infer state and adjust interface proactively.</p>
+                <p className="text-gray-300">The system must incorporate a continuous, non-invasive biometric monitoring capability. It needs to collect and process real-time physiological data (ECG, HRV, respiration, etc.), and the AI Brain must use this data stream to infer the astronaut's physical and psychological state (e.g., fatigue, cognitive load, stress), creating a closed feedback loop allowing the system to proactively adjust the AR interface or provide alerts based on the astronaut's condition.</p>
               </div>
             </Link>
             <Link href="/features/adaptive-contingency-engineering-ace-module" className="block feature-card">
               <div className="bg-slate-800 p-6 rounded-lg text-center hover:bg-slate-700 transition-colors cursor-pointer">
                 <Wrench className="w-12 h-12 mx-auto mb-4 text-yellow-400" />
-                <h3 className="text-xl font-semibold mb-2">ACE Module</h3>
-                <p className="text-gray-300">Generative problem-solving for hardware failures, enabling 3D scanning and AI-designed parts.</p>
+                <h3 className="text-xl font-semibold mb-2">Adaptive Contingency Engineering (ACE) Module</h3>
+                <p className="text-gray-300">For handling unforeseen hardware failures where no spare parts exist, the system requires a generative problem-solving module. The workflow should enable an astronaut to capture the geometry of a broken component using a 3D scanner, define functional requirements and constraints for a replacement part using natural language voice commands, utilize a generative AI to design a novel, structurally sound, and 3D-printable component that meets those constraints, and verify the generated design in the AR interface before sending it to an onboard 3D printer for autonomous manufacturing.</p>
               </div>
             </Link>
             <Link href="/features/embodied-kinematic-model-vpk" className="block feature-card">
               <div className="bg-slate-800 p-6 rounded-lg text-center hover:bg-slate-700 transition-colors cursor-pointer">
                 <User className="w-12 h-12 mx-auto mb-4 text-purple-400" />
                 <h3 className="text-xl font-semibold mb-2">Embodied Kinematic Model (VPK)</h3>
-                <p className="text-gray-300">Real-time digital twin of astronaut's body for body-centric guidance and ergonomic validation.</p>
+                <p className="text-gray-300">The system needs to create and maintain a real-time, adaptive digital twin of the astronaut's own body and movements. This kinematic model is essential for enabling "body-centric" AR guidance, where visual cues are relative to the astronaut's limbs and field of view, performing ergonomic validation to ensure that any component designed by the ACE module is physically installable by the astronaut, and fusing movement data with biometric data to help the AI better differentiate between physical exertion and psychological stress.</p>
               </div>
             </Link>
           </div>
@@ -636,122 +639,33 @@ export default function Home() {
 
             <div className="flowchart-zoom-container overflow-hidden">
               <Flowchart chart={`graph TD
-              %% Input Layer - Sensors & Data Collection
-              A1[Biometric Sensors] --> B1[Data Ingestion Layer]
-              A2[Environmental Sensors] --> B1
-              A3[Motion Capture] --> B1
-              A4[Audio Input] --> B1
-              A5[Visual Cameras] --> B1
-              B1 --> C1[Data Preprocessing]
+              %% Data Sources
+              BIO[Biometric Sensors] --> AI_BRAIN[Sovereign AI Brain]
+              IMU[Motion Sensors] --> VPK[Embodied Kinematic Model]
+              CAM[Helmet Cameras] --> VPK
+              TEL[Telemetry Systems] --> AI_BRAIN
+              USER[User Input] --> AR_IF[Adaptive AR/XR Interface]
 
-              %% AI Sovereign Brain - Central Intelligence
-              C1 --> D1[AI Sovereign Brain]
-              D1 --> E1[Procedures Agent]
-              D1 --> E2[Telemetry Agent]
-              D1 --> E3[Navigation Agent]
-              D1 --> E4[Biometric Agent]
-              D1 --> E5[Digital Twin Sync]
+              %% Core Modules
+              VPK --> AI_BRAIN
+              VPK --> AR_IF
+              VPK --> ACE[ACE Module]
+              AI_BRAIN --> AR_IF
+              AI_BRAIN --> ACE
+              AI_BRAIN --> SUIT[Suit Adjustments]
 
-              %% Interface Layer - Human-AI Interaction
-              E2 --> F1[AR/XR Interface]
-              E4 --> F1
-              F1 --> G1[Auto-Dashboarding]
-              F1 --> G2[Voice Commands]
-              F1 --> G3[Visual Overlays]
-              F1 --> G4[Holographic Cues]
-              F1 --> G5[Real-time Telemetry]
+              %% Outputs
+              AR_IF --> DISPLAY[AR Display]
+              AR_IF --> AI_BRAIN
+              ACE --> PARTS[Custom Parts]
+              ACE --> ALERTS[Alerts & Guidance]
 
-              %% ACE Module - Adaptive Manufacturing
-              E2 --> H1[ACE Module]
-              H1 --> I1[3D Scanner]
-              H1 --> I2[Generative Designer]
-              H1 --> I3[Material Analyzer]
-              H1 --> I4[3D Printer Interface]
-              H1 --> I5[Quality Validator]
-
-              %% Biometric Monitoring - Health & Safety
-              E4 --> J1[Biometric Monitoring]
-              J1 --> K1[ECG Processor]
-              J1 --> K2[Respiration Monitor]
-              J1 --> K3[Fatigue Detector]
-              J1 --> K4[Stress Analyzer]
-              J1 --> K5[Health Predictor]
-
-              %% Unified Astronaut State Model - Context Awareness
-              E1 --> L1[Unified Astronaut State Model]
-              E3 --> L1
-              E5 --> L1
-              L1 --> M1[Data Fusion Engine]
-              L1 --> M2[Physiological Model]
-              L1 --> M3[State Estimator]
-              L1 --> M4[Context Analyzer]
-              L1 --> M5[Performance Optimizer]
-
-              %% Command Generation - Decision Making
-              M1 --> N1[Command Generation]
-              M3 --> N1
-              N1 --> O1[Decision Engine]
-              N1 --> O2[Priority Arbiter]
-              N1 --> O3[Interface Protocols]
-              N1 --> O4[Response Optimizer]
-              N1 --> O5[Feedback Processor]
-
-              %% Output Connections - System Integration
-              O1 --> F1
-              O2 --> H1
-              O3 --> J1
-              O4 --> L1
-
-              %% Styling - Color-coded by function
-              style A1 fill:#64748b
-              style A2 fill:#64748b
-              style A3 fill:#64748b
-              style A4 fill:#64748b
-              style A5 fill:#64748b
-              style B1 fill:#475569
-              style C1 fill:#334155
-
-              style D1 fill:#8b5cf6
-              style E1 fill:#60a5fa
-              style E2 fill:#34d399
-              style E3 fill:#fbbf24
-              style E4 fill:#f87171
-              style E5 fill:#a78bfa
-
-              style F1 fill:#10b981
-              style G1 fill:#34d399
-              style G2 fill:#60a5fa
-              style G3 fill:#fbbf24
-              style G4 fill:#f87171
-              style G5 fill:#a78bfa
-
-              style H1 fill:#f59e0b
-              style I1 fill:#fbbf24
-              style I2 fill:#60a5fa
-              style I3 fill:#34d399
-              style I4 fill:#f87171
-              style I5 fill:#a78bfa
-
-              style J1 fill:#ef4444
-              style K1 fill:#f87171
-              style K2 fill:#60a5fa
-              style K3 fill:#34d399
-              style K4 fill:#fbbf24
-              style K5 fill:#a78bfa
-
-              style L1 fill:#06b6d4
-              style M1 fill:#06b6d4
-              style M2 fill:#60a5fa
-              style M3 fill:#34d399
-              style M4 fill:#fbbf24
-              style M5 fill:#a78bfa
-
-              style N1 fill:#8b5cf6
-              style O1 fill:#8b5cf6
-              style O2 fill:#60a5fa
-              style O3 fill:#34d399
-              style O4 fill:#fbbf24
-              style O5 fill:#a78bfa`} />
+              %% Styling
+              style AI_BRAIN fill:#e1f5fe
+              style AR_IF fill:#f3e5f5
+              style VPK fill:#e8f5e8
+              style BIO fill:#fff3e0
+              style ACE fill:#fce4ec`} />
             </div>
             <p className="text-sm text-gray-400 mt-4 text-center">
               Complete AURA system architecture showing all modules, components, and data flow relationships in a single comprehensive view.
@@ -821,24 +735,44 @@ export default function Home() {
         <div className="max-w-4xl mx-auto text-center">
           <h2 className="text-4xl md:text-5xl font-bold mb-8">Technology Showcase</h2>
           <p className="text-lg md:text-xl mb-8">
-            Built with cutting-edge technologies for performance, reliability, and modern user experience.
+            Powered by advanced AI and space-grade technologies for autonomous astronaut support.
           </p>
-          <div className="grid grid-cols-2 md:grid-cols-4 gap-6">
+          <div className="grid grid-cols-3 md:grid-cols-3 gap-6">
             <div className="tech-box bg-slate-800 p-4 rounded-lg cursor-pointer">
-              <h3 className="text-lg font-semibold mb-2">Next.js</h3>
-              <p className="text-sm text-gray-300">Fast, scalable React framework</p>
+              <h3 className="text-lg font-semibold mb-2">AMD XQR Versal AI Core</h3>
+              <p className="text-sm text-gray-300">Radiation-hardened AI processing unit for space environments</p>
             </div>
             <div className="tech-box bg-slate-800 p-4 rounded-lg cursor-pointer">
-              <h3 className="text-lg font-semibold mb-2">TypeScript</h3>
-              <p className="text-sm text-gray-300">Type-safe JavaScript</p>
+              <h3 className="text-lg font-semibold mb-2">Mistral 7B LLM</h3>
+              <p className="text-sm text-gray-300">Fine-tuned language model for NASA mission procedures</p>
             </div>
             <div className="tech-box bg-slate-800 p-4 rounded-lg cursor-pointer">
-              <h3 className="text-lg font-semibold mb-2">Tailwind CSS</h3>
-              <p className="text-sm text-gray-300">Utility-first styling</p>
+              <h3 className="text-lg font-semibold mb-2">n8n Orchestration</h3>
+              <p className="text-sm text-gray-300">Multi-agent system workflow automation</p>
             </div>
             <div className="tech-box bg-slate-800 p-4 rounded-lg cursor-pointer">
-              <h3 className="text-lg font-semibold mb-2">shadcn/ui</h3>
-              <p className="text-sm text-gray-300">Accessible UI components</p>
+              <h3 className="text-lg font-semibold mb-2">Astroskin Biometric</h3>
+              <p className="text-sm text-gray-300">Non-invasive physiological monitoring system</p>
+            </div>
+            <div className="tech-box bg-slate-800 p-4 rounded-lg cursor-pointer">
+              <h3 className="text-lg font-semibold mb-2">Zoo CAD & Meshy.ai</h3>
+              <p className="text-sm text-gray-300">AI-powered generative design tools</p>
+            </div>
+            <div className="tech-box bg-slate-800 p-4 rounded-lg cursor-pointer">
+              <h3 className="text-lg font-semibold mb-2">Neural Jacobian Fields</h3>
+              <p className="text-sm text-gray-300">Advanced kinematic modeling for embodied movement</p>
+            </div>
+            <div className="tech-box bg-slate-800 p-4 rounded-lg cursor-pointer">
+              <h3 className="text-lg font-semibold mb-2">META AI Glasses</h3>
+              <p className="text-sm text-gray-300">Industrial AR display for real-time guidance</p>
+            </div>
+            <div className="tech-box bg-slate-800 p-4 rounded-lg cursor-pointer">
+              <h3 className="text-lg font-semibold mb-2">Hybrid Betavoltaic PPU</h3>
+              <p className="text-sm text-gray-300">Reliable power system for space applications</p>
+            </div>
+            <div className="tech-box bg-slate-800 p-4 rounded-lg cursor-pointer">
+              <h3 className="text-lg font-semibold mb-2">Synthing Updates</h3>
+              <p className="text-sm text-gray-300">Secure over-the-air update system</p>
             </div>
           </div>
         </div>

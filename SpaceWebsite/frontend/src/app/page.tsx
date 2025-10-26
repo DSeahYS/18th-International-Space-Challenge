@@ -781,67 +781,149 @@ export default function Home() {
 
       {/* Market Opportunity Section */}
       <section className="py-20 px-4 bg-slate-800">
-        <div className="max-w-4xl mx-auto text-center">
-          <h2 className="text-4xl md:text-5xl font-bold mb-8">Market Opportunity</h2>
-          <p className="text-lg md:text-xl mb-8">
-            Project AURA addresses a rapidly growing market in space autonomy and AI-driven astronaut support.
-          </p>
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
-            <div className="bg-slate-700 p-6 rounded-lg">
-              <h3 className="text-3xl font-bold text-blue-400 mb-2">$400B+</h3>
-              <p className="text-gray-300">Global space industry by 2030</p>
+        <div className="max-w-6xl mx-auto">
+          <h2 className="text-4xl md:text-5xl font-bold text-center mb-12">Market Opportunities</h2>
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-12">
+            <div className="bg-slate-700 p-8 rounded-lg">
+              <h3 className="text-2xl font-semibold mb-6 text-blue-400">Competitive Advantages Over Existing AR Platforms</h3>
+              <ul className="text-gray-300 space-y-3">
+                <li>• <strong>Sovereign AI Architecture:</strong> Air-gapped, radiation-hardened system with no external dependencies</li>
+                <li>• <strong>Biometric-Adaptive Interface:</strong> Real-time physiological monitoring drives adaptive AR UI overlays</li>
+                <li>• <strong>Workflow Transparency:</strong> Built on n8n open workflow engine enabling end-user inspection and modification</li>
+                <li>• <strong>Generative Engineering:</strong> ACE module for on-demand component design and additive manufacturing</li>
+              </ul>
             </div>
-            <div className="bg-slate-700 p-6 rounded-lg">
-              <h3 className="text-3xl font-bold text-green-400 mb-2">10,000+</h3>
-              <p className="text-gray-300">Potential astronaut users worldwide</p>
+            <div className="bg-slate-700 p-8 rounded-lg">
+              <h3 className="text-2xl font-semibold mb-6 text-green-400">Dual-Use Applications</h3>
+              <div className="space-y-6">
+                <div>
+                  <h4 className="font-semibold text-green-300 mb-2">Healthcare</h4>
+                  <ul className="text-gray-300 text-sm space-y-1">
+                    <li>• High-risk workforce safety monitoring</li>
+                    <li>• Elite athlete performance optimization</li>
+                    <li>• Tele-medicine augmentation</li>
+                  </ul>
+                </div>
+                <div>
+                  <h4 className="font-semibold text-green-300 mb-2">Industrial AR</h4>
+                  <ul className="text-gray-300 text-sm space-y-1">
+                    <li>• Predictive maintenance for machinery</li>
+                    <li>• Smart grid optimization</li>
+                    <li>• Supply-chain resilience</li>
+                  </ul>
+                </div>
+              </div>
             </div>
-            <div className="bg-slate-700 p-6 rounded-lg">
-              <h3 className="text-3xl font-bold text-purple-400 mb-2">5x ROI</h3>
-              <p className="text-gray-300">Projected return on investment</p>
+            <div className="bg-slate-700 p-8 rounded-lg">
+              <h3 className="text-2xl font-semibold mb-6 text-purple-400">Business Projections</h3>
+              <div className="space-y-4">
+                <div className="flex justify-between items-center">
+                  <span className="text-gray-300">10-Year Revenue Total:</span>
+                  <span className="text-2xl font-bold text-purple-400">$1.8B</span>
+                </div>
+                <div className="flex justify-between items-center">
+                  <span className="text-gray-300">Space Market TAM:</span>
+                  <span className="text-xl font-semibold text-purple-300">$1.15B</span>
+                </div>
+                <div className="flex justify-between items-center">
+                  <span className="text-gray-300">Terrestrial Market TAM:</span>
+                  <span className="text-xl font-semibold text-purple-300">$15.44B</span>
+                </div>
+                <div className="flex justify-between items-center">
+                  <span className="text-gray-300">Projected ROI:</span>
+                  <span className="text-xl font-semibold text-purple-300">117%</span>
+                </div>
+              </div>
+            </div>
+            <div className="bg-slate-700 p-8 rounded-lg">
+              <h3 className="text-2xl font-semibold mb-6 text-yellow-400">Legal/Ethical Notes</h3>
+              <ul className="text-gray-300 space-y-3">
+                <li>• <strong>AI Usage Declaration:</strong> All generative AI outputs heavily modified with factual research</li>
+                <li>• <strong>Data Collection:</strong> Compliant with OST principles and GDPR-like astronaut data rights</li>
+                <li>• <strong>IP Framework:</strong> Human-in-command protocol ensures astronaut as inventor for AI-assisted designs</li>
+              </ul>
             </div>
           </div>
         </div>
       </section>
 
-      {/* Roadmap Section */}
-      <section className="py-20 px-4">
-        <div className="max-w-4xl mx-auto">
+      {/* Development Roadmap Section */}
+      <section className="py-20 px-4 bg-slate-800">
+        <div className="max-w-6xl mx-auto">
           <h2 className="text-4xl md:text-5xl font-bold text-center mb-12">Development Roadmap</h2>
-          <div className="space-y-8">
-            <div className="flex items-center">
-              <div className="flex-shrink-0 w-16 h-16 bg-blue-600 rounded-full flex items-center justify-center">
-                <span className="text-xl font-bold">Q1</span>
-              </div>
-              <div className="ml-6">
-                <h3 className="text-xl font-semibold">2025 - Prototype Development</h3>
-                <p className="text-gray-300">Complete AI brain integration and AR interface testing</p>
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-12">
+            <div className="bg-slate-700 p-8 rounded-lg">
+              <h3 className="text-2xl font-semibold mb-6 text-blue-400">Gantt Chart Milestones</h3>
+              <div className="space-y-4">
+                <div className="flex items-center">
+                  <div className="flex-shrink-0 w-4 h-4 bg-blue-500 rounded-full mr-3"></div>
+                  <div>
+                    <span className="font-semibold">TRL 3-4 by Feb 2025:</span>
+                    <span className="text-gray-300 ml-2">System Architecture & Design Complete</span>
+                  </div>
+                </div>
+                <div className="flex items-center">
+                  <div className="flex-shrink-0 w-4 h-4 bg-green-500 rounded-full mr-3"></div>
+                  <div>
+                    <span className="font-semibold">TRL 4-5 by Jun 2025:</span>
+                    <span className="text-gray-300 ml-2">Component Procurement & Development Complete</span>
+                  </div>
+                </div>
+                <div className="flex items-center">
+                  <div className="flex-shrink-0 w-4 h-4 bg-purple-500 rounded-full mr-3"></div>
+                  <div>
+                    <span className="font-semibold">TRL 5-6 by Oct 2025:</span>
+                    <span className="text-gray-300 ml-2">Software Development & AI Training Complete</span>
+                  </div>
+                </div>
+                <div className="flex items-center">
+                  <div className="flex-shrink-0 w-4 h-4 bg-yellow-500 rounded-full mr-3"></div>
+                  <div>
+                    <span className="font-semibold">TRL 6-7 by Dec 2025:</span>
+                    <span className="text-gray-300 ml-2">System Integration & Laboratory Testing Complete</span>
+                  </div>
+                </div>
+                <div className="flex items-center">
+                  <div className="flex-shrink-0 w-4 h-4 bg-red-500 rounded-full mr-3"></div>
+                  <div>
+                    <span className="font-semibold">TRL 7-8 by Mar 2026:</span>
+                    <span className="text-gray-300 ml-2">Environmental Testing & Validation Complete</span>
+                  </div>
+                </div>
+                <div className="flex items-center">
+                  <div className="flex-shrink-0 w-4 h-4 bg-indigo-500 rounded-full mr-3"></div>
+                  <div>
+                    <span className="font-semibold">TRL 9 by Oct 2026:</span>
+                    <span className="text-gray-300 ml-2">Flight Qualification & Certification Complete</span>
+                  </div>
+                </div>
               </div>
             </div>
-            <div className="flex items-center">
-              <div className="flex-shrink-0 w-16 h-16 bg-green-600 rounded-full flex items-center justify-center">
-                <span className="text-xl font-bold">Q3</span>
-              </div>
-              <div className="ml-6">
-                <h3 className="text-xl font-semibold">2025 - NASA Partnership</h3>
-                <p className="text-gray-300">Secure collaboration agreement and begin joint testing</p>
-              </div>
-            </div>
-            <div className="flex items-center">
-              <div className="flex-shrink-0 w-16 h-16 bg-purple-600 rounded-full flex items-center justify-center">
-                <span className="text-xl font-bold">2026</span>
-              </div>
-              <div className="ml-6">
-                <h3 className="text-xl font-semibold">2026 - Commercial Launch</h3>
-                <p className="text-gray-300">Deploy first commercial systems and expand to private space companies</p>
-              </div>
-            </div>
-            <div className="flex items-center">
-              <div className="flex-shrink-0 w-16 h-16 bg-yellow-600 rounded-full flex items-center justify-center">
-                <span className="text-xl font-bold">2027</span>
-              </div>
-              <div className="ml-6">
-                <h3 className="text-xl font-semibold">2027 - Global Expansion</h3>
-                <p className="text-gray-300">Scale to international space agencies and commercial markets</p>
+            <div className="bg-slate-700 p-8 rounded-lg">
+              <h3 className="text-2xl font-semibold mb-6 text-green-400">Budget Breakdown</h3>
+              <div className="space-y-6">
+                <div>
+                  <h4 className="font-semibold text-green-300 mb-2">6-Month Proof-of-Concept ($70,495)</h4>
+                  <ul className="text-gray-300 text-sm space-y-1">
+                    <li>• Hardware: $2,700 (AR glasses, biometric sensors)</li>
+                    <li>• Software & Cloud: $1,000</li>
+                    <li>• Personnel: $57,600 (4 team members)</li>
+                    <li>• Contingency: $9,195 (15%)</li>
+                  </ul>
+                </div>
+                <div>
+                  <h4 className="font-semibold text-green-300 mb-2">5-Year Overall Budget ($61.38M)</h4>
+                  <ul className="text-gray-300 text-sm space-y-1">
+                    <li>• Personnel & Labour: $22.4M</li>
+                    <li>• Hardware & Prototyping: $10.5M</li>
+                    <li>• Facilities & Test Infrastructure: $7.2M</li>
+                    <li>• Software & AI Services: $8M</li>
+                    <li>• Certifications & Compliance: $2.8M</li>
+                    <li>• Supply Chain & Materials: $4M</li>
+                    <li>• Travel & Collaboration: $1.2M</li>
+                    <li>• Contingency Reserve: $5.28M</li>
+                  </ul>
+                </div>
               </div>
             </div>
           </div>

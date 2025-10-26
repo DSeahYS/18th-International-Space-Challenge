@@ -1,6 +1,7 @@
 'use client';
 
 import Link from "next/link";
+import Image from "next/image";
 import { useEffect } from "react";
 import { animate, stagger } from "animejs";
 
@@ -78,7 +79,7 @@ export default function TeamPage() {
 
     // Enhanced hover animations with particle effects
     const avatars = document.querySelectorAll('.profile-avatar');
-    avatars.forEach((avatar, index) => {
+    avatars.forEach((avatar) => {
       avatar.addEventListener('mouseenter', () => {
         // Main avatar animation
         animate(avatar, {
@@ -155,10 +156,12 @@ export default function TeamPage() {
       <header className="bg-slate-800 py-4 px-4">
         <nav className="max-w-6xl mx-auto flex items-center justify-between">
           <Link href="/" className="flex items-center space-x-3">
-            <img
+            <Image
               src="/icons/Logo.png"
               alt="Project AURA Logo"
-              className="w-12 h-12 object-contain"
+              width={48}
+              height={48}
+              className="object-contain"
             />
             <span className="text-2xl font-bold text-blue-400">Project AURA</span>
           </Link>
@@ -194,8 +197,8 @@ export default function TeamPage() {
           <div className="mb-16">
             <h2 className="text-3xl font-bold text-center mb-8 text-blue-400">Core Development Team</h2>
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
-              {teamMembers.map((member, index) => (
-                <div key={index} className="bg-slate-800 p-6 rounded-lg text-center hover:bg-slate-700 transition-colors team-member">
+              {teamMembers.map((member) => (
+                <div key={member.name} className="bg-slate-800 p-6 rounded-lg text-center hover:bg-slate-700 transition-colors team-member">
                   <div className="profile-avatar w-24 h-24 bg-gray-600 rounded-full mx-auto mb-4 flex items-center justify-center cursor-pointer">
                     <span className="text-2xl font-bold text-blue-400">{member.name.split(' ').map(n => n[0]).join('')}</span>
                   </div>
@@ -211,8 +214,8 @@ export default function TeamPage() {
           <div className="mb-16">
             <h2 className="text-3xl font-bold text-center mb-8 text-green-400">Industry Mentors</h2>
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-              {mentors.map((mentor, index) => (
-                <div key={index} className="bg-slate-800 p-6 rounded-lg text-center hover:bg-slate-700 transition-colors team-member">
+              {mentors.map((mentor) => (
+                <div key={mentor.name} className="bg-slate-800 p-6 rounded-lg text-center hover:bg-slate-700 transition-colors team-member">
                   <div className="profile-avatar w-24 h-24 bg-gray-600 rounded-full mx-auto mb-4 flex items-center justify-center cursor-pointer">
                     <span className="text-2xl font-bold text-green-400">{mentor.name.split(' ').map(n => n[0]).join('')}</span>
                   </div>
@@ -227,10 +230,12 @@ export default function TeamPage() {
           {/* Project Info */}
           <div className="bg-slate-800 p-8 rounded-lg text-center">
             <div className="mb-8">
-              <img
+              <Image
                 src="/icons/Logo.png"
                 alt="Project AURA Logo"
-                className="w-64 h-64 mx-auto object-contain drop-shadow-2xl"
+                width={256}
+                height={256}
+                className="mx-auto object-contain drop-shadow-2xl"
               />
             </div>
             <h3 className="text-2xl font-bold mb-4">Project AURA</h3>

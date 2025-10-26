@@ -2,6 +2,7 @@
 
 import { Brain, Eye, Heart, Wrench, User } from "lucide-react";
 import Link from "next/link";
+import Image from "next/image";
 import Flowchart from "../components/Flowchart";
 import { useEffect } from "react";
 import { animate, stagger } from "animejs";
@@ -243,8 +244,8 @@ export default function Home() {
         }
       }
 
-      const viewFullBtn = document.querySelector('.view-full') as HTMLButtonElement;
-      const resetViewBtn = document.querySelector('.reset-view') as HTMLButtonElement;
+      // const viewFullBtn = document.querySelector('.view-full') as HTMLButtonElement;
+      // const resetViewBtn = document.querySelector('.reset-view') as HTMLButtonElement;
 
       if (zoomContainer && flowchartElement) {
         let currentZoom = 1;
@@ -253,9 +254,9 @@ export default function Home() {
         let isDragging = false;
         let startX = 0;
         let startY = 0;
-        let originalViewBox = flowchartElement.getAttribute('viewBox');
-        let originalWidth = flowchartElement.getAttribute('width');
-        let originalHeight = flowchartElement.getAttribute('height');
+        const originalViewBox = flowchartElement.getAttribute('viewBox');
+        // const originalWidth = flowchartElement.getAttribute('width');
+        // const originalHeight = flowchartElement.getAttribute('height');
 
         const zoomInBtn = document.querySelector('.zoom-in') as HTMLButtonElement;
         const zoomOutBtn = document.querySelector('.zoom-out') as HTMLButtonElement;
@@ -494,10 +495,12 @@ export default function Home() {
       <header className="sticky top-0 z-50 bg-slate-800/95 backdrop-blur-sm py-4 px-4 border-b border-slate-700">
         <nav className="max-w-6xl mx-auto flex items-center justify-between">
           <Link href="/" className="flex items-center space-x-3">
-            <img
+            <Image
               src="/icons/Logo.png"
               alt="Project AURA Logo"
-              className="w-12 h-12 object-contain"
+              width={48}
+              height={48}
+              className="object-contain"
             />
             <span className="text-2xl font-bold text-blue-400">Project AURA</span>
           </Link>
@@ -918,34 +921,42 @@ export default function Home() {
           {/* Partnership Logos */}
           <div className="grid grid-cols-2 md:grid-cols-4 gap-8 mb-16">
             <div className="bg-slate-700 p-6 rounded-lg text-center hover:bg-slate-600 transition-colors cursor-pointer partner-logo">
-              <img
+              <Image
                 src="/images/partners/nasa-logo.png"
                 alt="NASA Logo"
-                className="w-16 h-16 mx-auto mb-4 object-contain"
+                width={64}
+                height={64}
+                className="mx-auto mb-4 object-contain"
               />
               <p className="text-sm text-gray-300">Strategic Partner</p>
             </div>
             <div className="bg-slate-700 p-6 rounded-lg text-center hover:bg-slate-600 transition-colors cursor-pointer partner-logo">
-              <img
+              <Image
                 src="/images/partners/spacex-logo.png"
                 alt="SpaceX Logo"
-                className="w-16 h-16 mx-auto mb-4 object-contain"
+                width={64}
+                height={64}
+                className="mx-auto mb-4 object-contain"
               />
               <p className="text-sm text-gray-300">Technology Collaborator</p>
             </div>
             <div className="bg-slate-700 p-6 rounded-lg text-center hover:bg-slate-600 transition-colors cursor-pointer partner-logo">
-              <img
+              <Image
                 src="/images/partners/esa-logo.png"
                 alt="ESA Logo"
-                className="w-16 h-16 mx-auto mb-4 object-contain"
+                width={64}
+                height={64}
+                className="mx-auto mb-4 object-contain"
               />
               <p className="text-sm text-gray-300">Research Partner</p>
             </div>
             <div className="bg-slate-700 p-6 rounded-lg text-center hover:bg-slate-600 transition-colors cursor-pointer partner-logo">
-              <img
+              <Image
                 src="/images/partners/mit-logo.png"
                 alt="MIT Logo"
-                className="w-16 h-16 mx-auto mb-4 object-contain"
+                width={64}
+                height={64}
+                className="mx-auto mb-4 object-contain"
               />
               <p className="text-sm text-gray-300">Academic Partner</p>
             </div>

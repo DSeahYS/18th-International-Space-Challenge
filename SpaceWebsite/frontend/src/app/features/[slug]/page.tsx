@@ -1,6 +1,7 @@
 'use client';
 
 import Link from "next/link";
+import Image from "next/image";
 import { notFound } from "next/navigation";
 import Flowchart from "../../../components/Flowchart";
 import { useEffect, use } from "react";
@@ -258,10 +259,12 @@ export default function FeaturePage({ params }: { params: Promise<{ slug: string
       <header className="bg-slate-800 py-4 px-4">
         <nav className="max-w-6xl mx-auto flex items-center justify-between">
           <Link href="/" className="flex items-center space-x-3">
-            <img
+            <Image
               src="/icons/Logo.png"
               alt="Project AURA Logo"
-              className="w-12 h-12 object-contain"
+              width={48}
+              height={48}
+              className="object-contain"
             />
             <span className="text-2xl font-bold text-blue-400">Project AURA</span>
           </Link>
@@ -336,7 +339,7 @@ Data Ingestion → Data Fusion → Unified Astronaut State Model
             )}
 
             <div className="flex space-x-2">
-              {featureOrder.map((featureSlug, index) => (
+              {featureOrder.map((featureSlug) => (
                 <Link
                   key={featureSlug}
                   href={`/features/${featureSlug}`}

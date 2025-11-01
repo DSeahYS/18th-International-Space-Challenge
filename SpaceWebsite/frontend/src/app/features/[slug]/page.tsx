@@ -314,14 +314,28 @@ Data Ingestion → Data Fusion → Unified Astronaut State Model
           <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
             <div className="bg-slate-800 p-6 rounded-lg">
               <h3 className="text-xl font-semibold mb-4">Video Demonstration</h3>
-              <div className="bg-gray-700 h-64 flex items-center justify-center rounded">
-                <p className="text-gray-400">{feature.videoPlaceholder}</p>
+              <div className="bg-gray-700 rounded overflow-hidden">
+                <video
+                  controls
+                  className="w-full h-auto"
+                  poster="/Images/EARTH%20N8n.png"
+                >
+                  <source src="/Images/Videos/Whole%20Flow%20CLI.mp4" type="video/mp4" />
+                  Your browser does not support the video tag.
+                </video>
               </div>
             </div>
             <div className="bg-slate-800 p-6 rounded-lg">
               <h3 className="text-xl font-semibold mb-4">Visual Reference</h3>
-              <div className="bg-gray-700 h-64 flex items-center justify-center rounded">
-                <p className="text-gray-400">{feature.imagePlaceholder}</p>
+              <div className="bg-gray-700 rounded overflow-hidden">
+                <Image
+                  src="/Images/EARTH%20N8n.png"
+                  alt="EARTH N8n Workflow"
+                  width={600}
+                  height={400}
+                  className="w-full h-auto"
+                  priority
+                />
               </div>
             </div>
           </div>

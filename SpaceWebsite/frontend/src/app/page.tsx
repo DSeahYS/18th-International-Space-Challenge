@@ -986,17 +986,20 @@ export default function Home() {
             Watch our prototype demonstration showcasing the integrated AI systems working together.
           </p>
           <div className="bg-slate-800 p-8 rounded-lg">
-            <div className="aspect-video bg-gray-700 rounded-lg flex items-center justify-center mb-4">
-              <div className="text-center">
-                <div className="w-16 h-16 bg-blue-600 rounded-full flex items-center justify-center mx-auto mb-4">
-                  <span className="text-2xl">▶</span>
-                </div>
-                <p className="text-gray-400">Demo Video Placeholder</p>
-                <p className="text-sm text-gray-500 mt-2">Coming Soon - Full System Integration Demo</p>
-              </div>
+            <div className="aspect-video bg-gray-700 rounded-lg overflow-hidden mb-4">
+              <iframe
+                width="100%"
+                height="100%"
+                src="https://www.youtube.com/embed/SZm0bRVwVB8"
+                title="Project AURA Demo Video"
+                frameBorder="0"
+                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                allowFullScreen
+                className="rounded-lg"
+              ></iframe>
             </div>
             <p className="text-sm text-gray-400">
-              This video will showcase real-time biometric monitoring, adaptive AR interfaces, and AI-driven decision making in a simulated space environment.
+              This video showcases real-time biometric monitoring, adaptive AR interfaces, and AI-driven decision making in a simulated space environment.
             </p>
           </div>
         </div>

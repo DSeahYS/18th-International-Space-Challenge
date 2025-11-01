@@ -1,5 +1,5 @@
 This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
-
+[![Website](https://img.shields.io/badge/Website-18th--international--space--challenge.vercel.app-blue)](https://18th-international-space-challenge.vercel.app/)
 ## Getting Started
 
 First, run the development server:

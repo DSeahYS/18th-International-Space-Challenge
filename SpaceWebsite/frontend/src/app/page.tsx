@@ -232,56 +232,32 @@ export default function Home() {
     // Add smooth zoom functionality for flowchart
     setTimeout(() => {
       const zoomContainer = document.querySelector('.flowchart-zoom-container') as HTMLElement;
-      let flowchartElement: SVGElement | null = null;
+      let imageElement: HTMLImageElement | null = null;
 
       if (zoomContainer) {
-        flowchartElement = zoomContainer.querySelector('svg') as SVGElement;
-        if (!flowchartElement) {
-          const flowchartDiv = zoomContainer.querySelector('[class*="flowchart"]') as HTMLElement;
-          if (flowchartDiv) {
-            flowchartElement = flowchartDiv.querySelector('svg') as SVGElement;
-          }
-        }
+        imageElement = zoomContainer.querySelector('img') as HTMLImageElement;
       }
 
-      // const viewFullBtn = document.querySelector('.view-full') as HTMLButtonElement;
-      // const resetViewBtn = document.querySelector('.reset-view') as HTMLButtonElement;
-
-      if (zoomContainer && flowchartElement) {
+      if (zoomContainer && imageElement) {
         let currentZoom = 1;
         let currentX = 0;
         let currentY = 0;
         let isDragging = false;
         let startX = 0;
         let startY = 0;
-        const originalViewBox = flowchartElement.getAttribute('viewBox');
-        // const originalWidth = flowchartElement.getAttribute('width');
-        // const originalHeight = flowchartElement.getAttribute('height');
 
         const zoomInBtn = document.querySelector('.zoom-in') as HTMLButtonElement;
         const zoomOutBtn = document.querySelector('.zoom-out') as HTMLButtonElement;
         const zoomResetBtn = document.querySelector('.zoom-reset') as HTMLButtonElement;
 
-        // Function to update zoom and pan using viewBox (maintains quality)
+        // Function to update zoom and pan
         const updateZoom = () => {
-          if (originalViewBox) {
-            const viewBoxValues = originalViewBox.split(' ').map(Number);
-            const [origX, origY, width, height] = viewBoxValues;
-
-            // Calculate new viewBox for zoom
-            const newWidth = width / currentZoom;
-            const newHeight = height / currentZoom;
-
-            // Apply pan offset
-            const newX = origX + (width - newWidth) / 2 + currentX;
-            const newY = origY + (height - newHeight) / 2 + currentY;
-
-            flowchartElement.setAttribute('viewBox', `${newX} ${newY} ${newWidth} ${newHeight}`);
-          }
+          imageElement.style.transform = `scale(${currentZoom}) translate(${currentX}px, ${currentY}px)`;
+          imageElement.style.transformOrigin = 'center center';
         };
 
         const zoomIn = () => {
-          if (currentZoom < 2) {
+          if (currentZoom < 3) {
             currentZoom *= 1.2;
             updateZoom();
           }
@@ -298,9 +274,7 @@ export default function Home() {
           currentZoom = 1;
           currentX = 0;
           currentY = 0;
-          if (originalViewBox) {
-            flowchartElement.setAttribute('viewBox', originalViewBox);
-          }
+          updateZoom();
         };
 
         // Button event listeners
@@ -336,12 +310,12 @@ export default function Home() {
         });
 
         // Mouse drag for panning
-        flowchartElement.addEventListener('mousedown', (e: MouseEvent) => {
+        imageElement.addEventListener('mousedown', (e: MouseEvent) => {
           if (currentZoom > 1) {
             isDragging = true;
             startX = e.clientX - currentX;
             startY = e.clientY - currentY;
-            flowchartElement.style.cursor = 'grabbing';
+            imageElement.style.cursor = 'grabbing';
             e.preventDefault();
           }
         });
@@ -356,11 +330,13 @@ export default function Home() {
 
         document.addEventListener('mouseup', () => {
           isDragging = false;
-          flowchartElement.style.cursor = currentZoom > 1 ? 'grab' : 'default';
+          imageElement.style.cursor = currentZoom > 1 ? 'grab' : 'default';
         });
 
-        // Set initial cursor
-        flowchartElement.style.cursor = 'default';
+        // Set initial cursor and transform
+        imageElement.style.cursor = 'default';
+        imageElement.style.transition = 'transform 0.1s ease-out';
+        updateZoom();
       }
     }, 3000);
 
@@ -638,35 +614,14 @@ export default function Home() {
             </div>
 
             <div className="flowchart-zoom-container overflow-hidden">
-              <Flowchart chart={`graph TD
-               %% Data Sources
-               BIO[Biometric Sensors] --> BIO_MON[Biometric Monitoring]
-               IMU[Motion Sensors] --> VPK[Embodied Kinematic Model]
-               CAM[Helmet Cameras] --> VPK
-               TEL[Telemetry Systems] --> AI_BRAIN[Sovereign AI Brain]
-               USER[User Input] --> AR_IF[Adaptive AR/XR Interface]
-
-               %% Core Modules
-               BIO_MON --> AI_BRAIN
-               VPK --> AI_BRAIN
-               VPK --> AR_IF
-               VPK --> ACE[ACE Module]
-               AI_BRAIN --> AR_IF
-               AI_BRAIN --> ACE
-               AI_BRAIN --> SUIT[Suit Adjustments]
-
-               %% Outputs
-               AR_IF --> DISPLAY[AR Display]
-               AR_IF --> AI_BRAIN
-               ACE --> PARTS[Custom Parts]
-               ACE --> ALERTS[Alerts & Guidance]
-
-               %% Styling
-               style AI_BRAIN fill:#e1f5fe
-               style AR_IF fill:#f3e5f5
-               style VPK fill:#e8f5e8
-               style BIO_MON fill:#fff3e0
-               style ACE fill:#fce4ec`} />
+              <Image
+                src="/Images/AURA Overall.png"
+                alt="AURA Overall System Architecture"
+                width={1200}
+                height={800}
+                className="w-full h-auto"
+                priority
+              />
             </div>
             <p className="text-sm text-gray-400 mt-4 text-center">
               Complete AURA system architecture showing all modules, components, and data flow relationships in a single comprehensive view.

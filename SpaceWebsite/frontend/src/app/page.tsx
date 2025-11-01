@@ -615,7 +615,7 @@ export default function Home() {
 
             <div className="flowchart-zoom-container overflow-hidden">
               <Image
-                src="/Images/AURA Overall.png"
+                src="/Images/AURA%20Overall.png"
                 alt="AURA Overall System Architecture"
                 width={1200}
                 height={800}

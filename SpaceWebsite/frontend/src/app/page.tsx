@@ -615,7 +615,7 @@ export default function Home() {
 
             <div className="flowchart-zoom-container overflow-hidden">
               <Image
-                src="/Images/AURA%20Overall.png"
+                src="/images/AURA Overall.png"
                 alt="AURA Overall System Architecture"
                 width={1200}
                 height={800}
@@ -789,7 +789,23 @@ export default function Home() {
                   <span className="text-xl font-semibold text-purple-300">117%</span>
                 </div>
               </div>
-<img src="/images/Space and Terrestrial Financial Projection.png" alt="Space and Terrestrial Financial Projection" className="mt-4 w-full h-auto" />
+
+              {/* Financial Projection Tab */}
+              <div className="mt-6">
+                <button className="bg-purple-600 hover:bg-purple-700 text-white px-4 py-2 rounded-lg font-semibold transition-colors">
+                  View Financial Projections
+                </button>
+                <div className="mt-4 bg-slate-600 p-4 rounded-lg">
+                  <Image
+                    src="/Images/Space%20and%20Terrestrial%20Financial%20Projection.png"
+                    alt="Space and Terrestrial Financial Projection"
+                    width={800}
+                    height={600}
+                    className="w-full h-auto rounded"
+                    priority
+                  />
+                </div>
+              </div>
             </div>
             <div className="bg-slate-700 p-8 rounded-lg">
               <h3 className="text-2xl font-semibold mb-6 text-yellow-400">Legal/Ethical Notes</h3>

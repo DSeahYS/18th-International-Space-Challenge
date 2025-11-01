@@ -906,7 +906,6 @@ export default function Home() {
               </div>
             </div>
           </div>
-<img src="/images/Revenue and Investment Progression.png" alt="Revenue and Investment Progression" className="mt-4 w-full h-auto" />
         </div>
       </section>
 

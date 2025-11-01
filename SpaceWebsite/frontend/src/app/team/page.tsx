@@ -46,7 +46,7 @@ const mentors = [
   },
   {
     name: "Sanjeev Sharma",
-    role: "Principal Dynamics Engineer, SpaceX (Retired)",
+    role: "Principal Dynamics Engineer",
     bio: "Former Principal Dynamics Engineer at SpaceX. Expert in spacecraft systems, orbital mechanics, and mission-critical autonomous operations.",
     image: "/team/sanjeev.jpg",
     linkedin: "#"

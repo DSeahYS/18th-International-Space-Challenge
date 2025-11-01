@@ -768,6 +768,18 @@ export default function Home() {
                   </ul>
                 </div>
               </div>
+
+              {/* Market Opportunity Image */}
+              <div className="mt-6">
+                <Image
+                  src="/Images/AURA%20Terrestrial%20Market%20Opportunity.jpg"
+                  alt="AURA Terrestrial Market Opportunity"
+                  width={800}
+                  height={600}
+                  className="w-full h-auto rounded"
+                  priority
+                />
+              </div>
             </div>
             <div className="bg-slate-700 p-8 rounded-lg">
               <h3 className="text-2xl font-semibold mb-6 text-purple-400">Business Projections</h3>
@@ -797,8 +809,8 @@ export default function Home() {
                 </button>
                 <div className="mt-4 bg-slate-600 p-4 rounded-lg">
                   <Image
-                    src="/Images/Space%20and%20Terrestrial%20Financial%20Projection.png"
-                    alt="Space and Terrestrial Financial Projection"
+                    src="/Images/AURA%20Terrestrial%20Business%20Model%20(10%20Years).jpg"
+                    alt="AURA Terrestrial Business Model (10 Years)"
                     width={800}
                     height={600}
                     className="w-full h-auto rounded"

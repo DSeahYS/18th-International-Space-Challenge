@@ -39,15 +39,15 @@ const teamMembers = [
 const mentors = [
   {
     name: "Don Balanzat",
-    role: "XR & AI Systems Developer, Blue Origin",
-    bio: "Senior XR and AI systems developer at Blue Origin. Provides guidance on AR/VR integration and AI-driven autonomous systems for space applications.",
+    role: "XR & AI Systems Developer, ChaoticCuriosity",
+    bio: "Founder and XR & AI Systems Developer, ChaoticCuriosity. Provides guidance on AR/VR integration and AI-driven autonomous systems for space applications.",
     image: "/team/don.jpg",
     linkedin: "#"
   },
   {
     name: "Sanjeev Sharma",
     role: "Principal Dynamics Engineer",
-    bio: "Former Principal Dynamics Engineer at SpaceX. Expert in spacecraft systems, orbital mechanics, and mission-critical autonomous operations.",
+    bio: "Principal Dynamics Engineer. Expert in spacecraft systems, orbital mechanics, and mission-critical autonomous operations.",
     image: "/team/sanjeev.jpg",
     linkedin: "#"
   },

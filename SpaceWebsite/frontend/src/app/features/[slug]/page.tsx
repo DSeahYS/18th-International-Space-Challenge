@@ -293,22 +293,87 @@ export default function FeaturePage({ params }: { params: Promise<{ slug: string
 
           <div className="bg-slate-800 p-8 rounded-lg mb-8">
             <h2 className="text-2xl font-semibold mb-4">Processing Flow</h2>
-            {feature.flowchart ? (
-              <Flowchart chart={feature.flowchart} />
-            ) : (
-              <div className="bg-gray-700 p-4 rounded text-sm font-mono text-gray-300 overflow-x-auto">
-                <pre>{`
+
+            {/* Tab Navigation */}
+            <div className="flex space-x-4 mb-6 border-b border-slate-600">
+              <button
+                className={`px-4 py-2 rounded-t-lg font-semibold transition-colors ${
+                  slug === 'sovereign-ai-brain' ? 'bg-blue-600 text-white' : 'bg-slate-700 text-gray-300 hover:bg-slate-600'
+                }`}
+                onClick={() => {
+                  const flowchartTab = document.getElementById('flowchart-tab');
+                  const imageTab = document.getElementById('image-tab');
+                  const flowchartBtn = document.getElementById('flowchart-btn');
+                  const imageBtn = document.getElementById('image-btn');
+
+                  if (flowchartTab && imageTab && flowchartBtn && imageBtn) {
+                    flowchartTab.style.display = 'block';
+                    imageTab.style.display = 'none';
+                    flowchartBtn.className = 'px-4 py-2 rounded-t-lg font-semibold transition-colors bg-blue-600 text-white';
+                    imageBtn.className = 'px-4 py-2 rounded-t-lg font-semibold transition-colors bg-slate-700 text-gray-300 hover:bg-slate-600';
+                  }
+                }}
+                id="flowchart-btn"
+              >
+                Interactive Flowchart
+              </button>
+              <button
+                className={`px-4 py-2 rounded-t-lg font-semibold transition-colors ${
+                  slug !== 'sovereign-ai-brain' ? 'bg-slate-700 text-gray-300 hover:bg-slate-600' : 'bg-slate-700 text-gray-300 hover:bg-slate-600'
+                }`}
+                onClick={() => {
+                  const flowchartTab = document.getElementById('flowchart-tab');
+                  const imageTab = document.getElementById('image-tab');
+                  const flowchartBtn = document.getElementById('flowchart-btn');
+                  const imageBtn = document.getElementById('image-btn');
+
+                  if (flowchartTab && imageTab && flowchartBtn && imageBtn) {
+                    flowchartTab.style.display = 'none';
+                    imageTab.style.display = 'block';
+                    flowchartBtn.className = 'px-4 py-2 rounded-t-lg font-semibold transition-colors bg-slate-700 text-gray-300 hover:bg-slate-600';
+                    imageBtn.className = 'px-4 py-2 rounded-t-lg font-semibold transition-colors bg-blue-600 text-white';
+                  }
+                }}
+                id="image-btn"
+              >
+                N8n Workflow Image
+              </button>
+            </div>
+
+            {/* Flowchart Tab */}
+            <div id="flowchart-tab" className={slug === 'sovereign-ai-brain' ? 'block' : 'hidden'}>
+              {feature.flowchart ? (
+                <Flowchart chart={feature.flowchart} />
+              ) : (
+                <div className="bg-gray-700 p-4 rounded text-sm font-mono text-gray-300 overflow-x-auto">
+                  <pre>{`
 Data Ingestion → Data Fusion → Unified Astronaut State Model
                       ↓
             Priority Arbitration → Knowledge Management → Command Generation
                       ↓
             AR Interface Commands | ACE Module Triggers | Suit Adjustments
                 `}</pre>
-              </div>
-            )}
-            <p className="text-sm text-gray-400 mt-2">
-              Interactive flowchart showing the module's data processing pipeline.
-            </p>
+                </div>
+              )}
+              <p className="text-sm text-gray-400 mt-2">
+                Interactive flowchart showing the module's data processing pipeline.
+              </p>
+            </div>
+
+            {/* Image Tab */}
+            <div id="image-tab" className="hidden">
+              <Image
+                src="/Images/Full%20Flow%20N8n.png"
+                alt="Full Flow N8n Workflow"
+                width={800}
+                height={600}
+                className="w-full h-auto rounded"
+                priority
+              />
+              <p className="text-sm text-gray-400 mt-2">
+                Complete N8n workflow visualization showing the AI Brain's processing pipeline.
+              </p>
+            </div>
           </div>
 
           <div className="grid grid-cols-1 md:grid-cols-2 gap-8">

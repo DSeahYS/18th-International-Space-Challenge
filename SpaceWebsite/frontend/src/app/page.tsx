@@ -1175,6 +1175,13 @@ export default function Home() {
               className="w-full max-w-4xl h-auto rounded-lg shadow-lg"
               priority
               unoptimized={true}
+              onError={(e) => {
+                console.error('Image failed to load:', e);
+                e.currentTarget.style.display = 'none';
+              }}
+              onLoad={() => {
+                console.log('Image loaded successfully');
+              }}
             />
           </div>
         </div>

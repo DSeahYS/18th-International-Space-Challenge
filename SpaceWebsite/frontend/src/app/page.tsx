@@ -772,12 +772,13 @@ export default function Home() {
               {/* Market Opportunity Image */}
               <div className="mt-6">
                 <Image
-                  src="/Images/AURA%20Terrestrial%20Market%20Opportunity.jpg"
+                  src="/images/AURA%20Terrestrial%20Market%20Opportunity.jpg"
                   alt="AURA Terrestrial Market Opportunity"
                   width={800}
                   height={600}
                   className="w-full h-auto rounded"
                   priority
+                  unoptimized={true}
                 />
               </div>
             </div>
@@ -805,12 +806,13 @@ export default function Home() {
               {/* Financial Projection Image */}
               <div className="mt-6">
                 <Image
-                  src="/Images/AURA%20Terrestrial%20Business%20Model%20(10%20Years).jpg"
+                  src="/images/AURA%20Terrestrial%20Business%20Model%20(10%20Years).jpg"
                   alt="AURA Terrestrial Business Model (10 Years)"
                   width={800}
                   height={600}
                   className="w-full h-auto rounded"
                   priority
+                  unoptimized={true}
                 />
               </div>
             </div>
@@ -1172,6 +1174,7 @@ export default function Home() {
               height={800}
               className="w-full max-w-4xl h-auto rounded-lg shadow-lg"
               priority
+              unoptimized={true}
             />
           </div>
         </div>

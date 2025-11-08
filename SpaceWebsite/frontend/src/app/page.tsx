@@ -6,7 +6,6 @@ import Image from "next/image";
 import Flowchart from "../components/Flowchart";
 import { useEffect } from "react";
 import { animate, stagger } from "animejs";
-import Poster from '/images/Poster.png';
 
 export default function Home() {
   useEffect(() => {
@@ -696,7 +695,7 @@ export default function Home() {
           </p>
           <div className="grid grid-cols-3 md:grid-cols-3 gap-6">
             <div className="tech-box bg-slate-800 p-4 rounded-lg cursor-pointer">
-              <Image src={Poster} alt="Poster" width={300} height={200} className="w-full h-auto rounded-lg" />
+              <Image src="/images/Poster.png" alt="Poster" width={300} height={200} className="w-full h-auto rounded-lg" />
             </div>
             <div className="tech-box bg-slate-800 p-4 rounded-lg cursor-pointer">
               <h3 className="text-lg font-semibold mb-2">Mistral 7B LLM</h3>

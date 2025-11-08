@@ -695,7 +695,8 @@ export default function Home() {
           </p>
           <div className="grid grid-cols-3 md:grid-cols-3 gap-6">
             <div className="tech-box bg-slate-800 p-4 rounded-lg cursor-pointer">
-              <Image src="/images/Poster.png" alt="Poster" width={300} height={200} className="w-full h-auto rounded-lg" />
+              <h3 className="text-lg font-semibold mb-2">AMD XQR Versal AI Core</h3>
+              <p className="text-sm text-gray-300">Radiation-hardened AI processing unit optimized for space environments</p>
             </div>
             <div className="tech-box bg-slate-800 p-4 rounded-lg cursor-pointer">
               <h3 className="text-lg font-semibold mb-2">Mistral 7B LLM</h3>
@@ -1152,6 +1153,26 @@ export default function Home() {
               These applications showcase AURA's potential to revolutionize multiple industries,
               from industrial automation to environmental monitoring and beyond.
             </p>
+          </div>
+        </div>
+      </section>
+
+      {/* AURA Beyond Space Section */}
+      <section className="py-20 px-4">
+        <div className="max-w-6xl mx-auto">
+          <h2 className="text-4xl md:text-5xl font-bold text-center mb-12">AURA Beyond Space</h2>
+          <p className="text-lg md:text-xl text-center mb-12 text-gray-300">
+            Exploring the transformative potential of AURA technology across diverse domains beyond space exploration.
+          </p>
+          <div className="flex justify-center">
+            <Image
+              src="/images/Poster.png"
+              alt="AURA Beyond Space Poster"
+              width={1200}
+              height={800}
+              className="w-full max-w-4xl h-auto rounded-lg shadow-lg"
+              priority
+            />
           </div>
         </div>
       </section>

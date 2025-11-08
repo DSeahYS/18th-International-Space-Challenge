@@ -426,6 +426,34 @@ Data Ingestion → Data Fusion → Unified Astronaut State Model
                   </div>
                 </div>
               </>
+            ) : slug === 'adaptive-ar-xr-visual-interface' ? (
+              <>
+                <div className="bg-slate-800 p-6 rounded-lg">
+                  <h3 className="text-xl font-semibold mb-4">Video Demonstration</h3>
+                  <div className="bg-gray-700 rounded overflow-hidden">
+                    <video
+                      controls
+                      className="w-full h-auto"
+                    >
+                      <source src="/images/Videos/Evan G1 Demo Inside.mp4" type="video/mp4" />
+                      Your browser does not support the video tag.
+                    </video>
+                  </div>
+                </div>
+                <div className="bg-slate-800 p-6 rounded-lg">
+                  <h3 className="text-xl font-semibold mb-4">Visual Reference</h3>
+                  <div className="bg-gray-700 rounded overflow-hidden">
+                    <Image
+                      src="/images/EvanG1.png"
+                      alt="Visual Reference for Adaptive AR/XR Visual Interface"
+                      width={600}
+                      height={400}
+                      className="w-full h-auto"
+                      priority
+                    />
+                  </div>
+                </div>
+              </>
             ) : (
               <>
                 <div className="bg-slate-800 p-6 rounded-lg">

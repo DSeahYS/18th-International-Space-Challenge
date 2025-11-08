@@ -504,7 +504,7 @@ export default function Home() {
       <section
         className="flex flex-col items-center justify-center min-h-screen px-4 text-center relative"
         style={{
-          backgroundImage: 'url(/images/hero/space-background.jpg)',
+          backgroundImage: 'url(/Images/hero/space-background.jpg)',
           backgroundSize: 'cover',
           backgroundPosition: 'center',
           backgroundRepeat: 'no-repeat'
@@ -615,7 +615,7 @@ export default function Home() {
 
             <div className="flowchart-zoom-container overflow-hidden">
               <Image
-                src="/images/AURA Overall.png"
+                src="/Images/AURA Overall.png"
                 alt="AURA Overall System Architecture"
                 width={1200}
                 height={800}
@@ -772,7 +772,7 @@ export default function Home() {
               {/* Market Opportunity Image */}
               <div className="mt-6">
                 <Image
-                  src="/images/AURA%20Terrestrial%20Market%20Opportunity.jpg"
+                  src="/Images/AURA%20Terrestrial%20Market%20Opportunity.jpg"
                   alt="AURA Terrestrial Market Opportunity"
                   width={800}
                   height={600}
@@ -806,7 +806,7 @@ export default function Home() {
               {/* Financial Projection Image */}
               <div className="mt-6">
                 <Image
-                  src="/images/AURA%20Terrestrial%20Business%20Model%20(10%20Years).jpg"
+                  src="/Images/AURA%20Terrestrial%20Business%20Model%20(10%20Years).jpg"
                   alt="AURA Terrestrial Business Model (10 Years)"
                   width={800}
                   height={600}
@@ -1168,7 +1168,7 @@ export default function Home() {
           </p>
           <div className="flex justify-center">
             <Image
-              src="/images/Poster.png"
+              src="/Images/Poster.png"
               alt="AURA Beyond Space Poster"
               width={1200}
               height={800}

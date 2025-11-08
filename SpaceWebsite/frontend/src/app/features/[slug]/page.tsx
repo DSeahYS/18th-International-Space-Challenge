@@ -435,7 +435,7 @@ Data Ingestion → Data Fusion → Unified Astronaut State Model
                       controls
                       className="w-full h-auto"
                     >
-                      <source src="/images/Videos/Evan G1 Demo Inside.mp4" type="video/mp4" />
+                      <source src="/Images/Videos/Evan G1 Demo Inside.mp4" type="video/mp4" />
                       Your browser does not support the video tag.
                     </video>
                   </div>
@@ -444,8 +444,92 @@ Data Ingestion → Data Fusion → Unified Astronaut State Model
                   <h3 className="text-xl font-semibold mb-4">Visual Reference</h3>
                   <div className="bg-gray-700 rounded overflow-hidden">
                     <Image
-                      src="/images/EvanG1.png"
+                      src="/Images/EvanG1.png"
                       alt="Visual Reference for Adaptive AR/XR Visual Interface"
+                      width={600}
+                      height={400}
+                      className="w-full h-auto"
+                      priority
+                    />
+                  </div>
+                </div>
+              </>
+            ) : slug === 'closed-loop-biometric-monitoring' ? (
+              <>
+                <div className="bg-slate-800 p-6 rounded-lg">
+                  <h3 className="text-xl font-semibold mb-4">Video Demonstration</h3>
+                  <div className="bg-gray-700 rounded overflow-hidden">
+                    <video
+                      controls
+                      className="w-full h-auto"
+                    >
+                      <source src="/Images/Videos/Biotracker.mkv" type="video/x-matroska" />
+                      Your browser does not support the video tag.
+                    </video>
+                  </div>
+                </div>
+                <div className="bg-slate-800 p-6 rounded-lg">
+                  <h3 className="text-xl font-semibold mb-4">Visual Reference</h3>
+                  <div className="bg-gray-700 rounded overflow-hidden">
+                    <Image
+                      src="/Images/BiotrackerPic.png"
+                      alt="Visual Reference for Closed-Loop Biometric Monitoring"
+                      width={600}
+                      height={400}
+                      className="w-full h-auto"
+                      priority
+                    />
+                  </div>
+                </div>
+              </>
+            ) : slug === 'adaptive-contingency-engineering-ace-module' ? (
+              <>
+                <div className="bg-slate-800 p-6 rounded-lg">
+                  <h3 className="text-xl font-semibold mb-4">Video Demonstration</h3>
+                  <div className="bg-gray-700 rounded overflow-hidden">
+                    <video
+                      controls
+                      className="w-full h-auto"
+                    >
+                      <source src="/Images/Videos/ACE.MP4" type="video/mp4" />
+                      Your browser does not support the video tag.
+                    </video>
+                  </div>
+                </div>
+                <div className="bg-slate-800 p-6 rounded-lg">
+                  <h3 className="text-xl font-semibold mb-4">Visual Reference</h3>
+                  <div className="bg-gray-700 rounded overflow-hidden">
+                    <Image
+                      src="/Images/ACEPic.png"
+                      alt="Visual Reference for ACE Module"
+                      width={600}
+                      height={400}
+                      className="w-full h-auto"
+                      priority
+                    />
+                  </div>
+                </div>
+              </>
+            ) : slug === 'embodied-kinematic-model-vpk' ? (
+              <>
+                <div className="bg-slate-800 p-6 rounded-lg">
+                  <h3 className="text-xl font-semibold mb-4">Video Demonstration</h3>
+                  <div className="bg-gray-700 rounded overflow-hidden">
+                    <video
+                      controls
+                      className="w-full h-auto"
+                    >
+                      <source src="/Images/Videos/VPK Showcase.mkv" type="video/x-matroska" />
+                      Your browser does not support the video tag.
+                    </video>
+                  </div>
+                </div>
+                <div className="bg-slate-800 p-6 rounded-lg">
+                  <h3 className="text-xl font-semibold mb-4">Visual Reference</h3>
+                  <div className="bg-gray-700 rounded overflow-hidden">
+                    <Image
+                      src="/Images/VPKPic.png"
+                      alt="Visual Reference for VPK"
                       width={600}
                       height={400}
                       className="w-full h-auto"

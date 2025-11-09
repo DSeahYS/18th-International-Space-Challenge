@@ -230,12 +230,6 @@ Advanced kinematic modeling system for real-time digital twin creation and embod
 - **Sanjeev Sharma**: Principal Dynamics Engineer, SpaceX (Retired)
 - **Matthew Chew**: Nuclear Competency & Strategy Lead, HY
 
-### Strategic Partners
-- NASA (Strategic Partner)
-- SpaceX (Technology Collaborator)
-- ESA (Research Partner)
-- MIT (Academic Partner)
-
 ## Contributing
 
 This repository contains multiple interconnected projects. Please see individual component READMEs for specific contribution guidelines:

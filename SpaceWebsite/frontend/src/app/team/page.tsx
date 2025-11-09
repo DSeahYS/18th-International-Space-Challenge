@@ -15,7 +15,7 @@ const teamMembers = [
   },
   {
     name: "Darren Seah Yong Liang",
-    role: "AI & Automation Lead",
+    role: "Co-Founder, AI Flow & Automation Lead",
     bio: "Specializes in AI algorithms and autonomous systems. Develops the intelligent decision-making capabilities that power AURA's adaptive responses.",
     image: "/team/darren.jpg",
     linkedin: "#"

@@ -16,6 +16,12 @@ const featureOrder = [
   "embodied-kinematic-model-vpk"
 ];
 
+const alphagenomeStep = {
+  slug: "alphagenome",
+  label: "AlphaGenome",
+  href: "/alphagenome",
+};
+
 const features = {
   "sovereign-ai-brain": {
     title: "Sovereign AI Brain",
@@ -580,6 +586,15 @@ Data Ingestion → Data Fusion → Unified Astronaut State Model
                   }`}
                 />
               ))}
+
+              {/* Alphagenome step appears after VPK, matching existing dot/stepper pattern */}
+              {slug === 'embodied-kinematic-model-vpk' && (
+                <Link
+                  href={alphagenomeStep.href}
+                  className="w-3 h-3 rounded-full bg-slate-600 hover:bg-slate-500 transition-all duration-300"
+                  aria-label={alphagenomeStep.label}
+                />
+              )}
             </div>
 
             {nextFeature && (
@@ -588,6 +603,17 @@ Data Ingestion → Data Fusion → Unified Astronaut State Model
                 className="nav-button flex items-center space-x-2 bg-slate-700 hover:bg-slate-600 px-6 py-3 rounded-lg font-semibold transition-all duration-300"
               >
                 <span>Next</span>
+                <ChevronRight className="w-5 h-5" />
+              </Link>
+            )}
+
+            {/* Explicit "Next" control from VPK to AlphaGenome */}
+            {slug === 'embodied-kinematic-model-vpk' && !nextFeature && (
+              <Link
+                href={alphagenomeStep.href}
+                className="nav-button flex items-center space-x-2 bg-slate-700 hover:bg-slate-600 px-6 py-3 rounded-lg font-semibold transition-all duration-300"
+              >
+                <span>{alphagenomeStep.label}</span>
                 <ChevronRight className="w-5 h-5" />
               </Link>
             )}

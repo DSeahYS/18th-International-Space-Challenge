@@ -588,6 +588,18 @@ export default function Home() {
                 <p className="text-gray-300">The system needs to create and maintain a real-time, adaptive digital twin of the astronaut's own body and movements. This kinematic model is essential for enabling "body-centric" AR guidance, where visual cues are relative to the astronaut's limbs and field of view, performing ergonomic validation to ensure that any component designed by the ACE module is physically installable by the astronaut, and fusing movement data with biometric data to help the AI better differentiate between physical exertion and psychological stress.</p>
               </div>
             </Link>
+            <Link href="/alphagenome" className="block feature-card">
+              <div className="bg-slate-800 p-6 rounded-lg text-center hover:bg-slate-700 transition-colors cursor-pointer">
+                <User className="w-12 h-12 mx-auto mb-4 text-teal-400" />
+                <h3 className="text-xl font-semibold mb-2">AlphaGenome Genomic Insight Engine</h3>
+                <p className="text-gray-300">
+                  Mission-personalized genomics and epigenetic analysis that models how each astronaut's unique biology responds to microgravity, radiation, and workload, feeding AURA with individualized constraints to adapt procedures, suit configurations, recovery protocols, and risk thresholds in a continuously closed-loop manner.
+                </p>
+                <span className="inline-block mt-4 text-sm font-semibold text-teal-300 hover:text-teal-200 transition-colors">
+                  Learn more →
+                </span>
+              </div>
+            </Link>
           </div>
         </div>
       </section>

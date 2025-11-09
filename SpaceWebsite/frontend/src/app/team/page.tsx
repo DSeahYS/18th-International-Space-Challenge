@@ -8,7 +8,7 @@ import { animate, stagger } from "animejs";
 const teamMembers = [
   {
     name: "Dave Seah Yong Sheng",
-    role: "Architecture & Research Lead",
+    role: "Founder, Chief Architect, and Chief Research",
     bio: "Leads the overall system architecture and research direction for Project AURA. Ensures technical excellence and innovation across all modules.",
     image: "/team/dave.jpg",
     linkedin: "#"

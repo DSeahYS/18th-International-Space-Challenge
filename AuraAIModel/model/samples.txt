@@ -1,0 +1,135 @@
+## Validation samples
+===
+Source: trained
+Prompt:
+EVA suit pressure loss during lunar surface operations.
+
+Response:
+their effects on the suit pressure Primary view of object titled 'EVA suit pressure loss during
+lunar surface operations. Volume 1: A study of the leakage paths and their effects on the suit
+pressure'. The Apollo lunar surface EVA suit pressure loss problem is analyzed. The leakage paths
+are identified and the leakage rates are calculated. The leakage paths are: (1) the visor seal, (2)
+the wrist rings, (3) the glove rings, (4) the cuff rings, (5) the hip rings, (6) the cuff seals, (7)
+the glove seals, (8) the visor ring, (9) the helmet ring, (10) the chest seal, (11) the hip seal,
+(12) the cuff hinge, (13) the glove hinge, (14) the glove cuff, (15) the cuff hinge, (16) the glove
+hinge, (17) the glove cuff, (18) the cuff hinge, (19) the glove hinge, (20) the glove cuff, (21) the
+cuff hinge, (22) the glove hinge, (23) the glove cuff, (24) the cuff hinge, (25) the glove hinge,
+(26) the glove cuff, (27) the cuff hinge, (28) the glove hinge, (29) the glove cuff, (30) the cuff
+hinge, (31) the glove hinge, (32) the glove cuff, (33) the cuff hinge, (34) the glove hinge, (35)
+the glove cuff, (36) the cuff hinge, (37) the glove hinge, (38) the glove cuff, (39) the cuff hinge,
+(40) the glove hinge, (41) the glove cuff, (42) the cuff hinge, (43) the glove hinge, (44) the glove
+cuff, (45) the cuff hinge, (46) the glove hinge, (47) the glove cuff, (48) the cuff hinge, (49) the
+glove hinge, (50) the glove cuff, (51) the cuff hinge, (52) the glove hinge, (53) the glove cuff,
+(54) the cuff hinge, (55) the glove hinge, (56) the glove cuff, (57) the cuff hinge, (58) the glove
+hinge, (59) the glove cuff, (60) the cuff hinge, (61) the glove hinge, (
+
+===
+Source: trained
+Prompt:
+Low O2 reading during extended EVA timeline.
+
+Response:
+EVA on the lunar surface. What is the normal O2 level for a space suit? What is the minimum O2 level
+before the suit will shut down? What is the normal O2 level for a space station? What is the minimum
+O2 level before the station will shut down? What is the normal O2 level for a lunar habitat? What is
+the minimum O2 level before the habitat will shut down? What is the normal O2 level for a Mars
+habitat? What is the minimum O2 level before the habitat will shut down? What is the normal O2 level
+for a space suit during a Mars EVA? What is the minimum O2 level before the suit will shut down?
+What is the normal O2 level for a space station during a Mars EVA? What is the minimum O2 level
+before the station will shut down? What is the normal O2 level for a lunar habitat during a Mars
+EVA? What is the minimum O2 level before the habitat will shut down? What is the normal O2 level for
+a Mars habitat during a Mars EVA? What is the minimum O2 level before the habitat will shut down?
+What is the normal O2 level for a space suit during a lunar habitat EVA? What is the minimum O2
+level before the suit will shut down? What is the normal O2 level for a space station during a lunar
+habitat EVA? What is the minimum O2 level before the station will shut down? What is the normal O2
+level for a lunar habitat during a lunar habitat EVA? What is the minimum O2 level before the
+habitat will shut down? What is the normal O2 level for a Mars habitat during a lunar habitat EVA?
+What is the minimum O2 level before the habitat will shut down? What is the normal O2 level for a
+space suit during a Mars habitat EVA? What is the minimum O2 level before the suit will shut down?
+What is the normal O2 level for a space station during a Mars habitat EVA? What is the minimum O2
+level before the station will shut down? What is the normal O2 level for a lunar habitat during a
+Mars habitat EVA? What is the minimum O2 level before the habitat will shut down? What is the normal
+O2 level for a Mars habitat during a Mars habitat EVA? What is the minimum O2 level before the
+habitat will shut down? What is the normal O2 level for a space
+
+===
+Source: trained
+Prompt:
+Loss of comms between surface crew and habitat.
+
+Response:
+. All habitat systems are nominal. All habitat airlock lights are on. All habitat airlock o2 and co2
+levels are nominal. All habitat airlock pressure is nominal. All habitat airlock temperature is
+nominal. All habitat airlock water levels are nominal. All habitat airlock food levels are nominal.
+All habitat airlock science samples are nominal. All habitat airlock science equipment is nominal.
+All habitat airlock personal items are nominal. All habitat airlock personal hygiene items are
+nominal. All habitat airlock personal medical items are nominal. All habitat airlock personal safety
+items are nominal. All habitat airlock personal emergency items are nominal. All habitat airlock
+personal navigation items are nominal. All habitat airlock personal comms items are nominal. All
+habitat airlock personal habitat controls are nominal. All habitat airlock personal habitat
+maintenance is nominal. All habitat airlock personal habitat inspection is nominal. All habitat
+airlock personal habitat repair is nominal. All habitat airlock personal habitat reconfiguration is
+nominal. All habitat airlock personal habitat reentry is nominal. All habitat airlock personal
+habitat egress is nominal. All habitat airlock personal habitat ingress is nominal. All habitat
+airlock personal habitat ingress is nominal. All habitat airlock personal habitat ingress is
+nominal. All habitat airlock personal habitat ingress is nominal. All habitat airlock personal
+habitat ingress is nominal. All habitat airlock personal habitat ingress is nominal. All habitat
+airlock personal habitat ingress is nominal. All habitat airlock personal habitat ingress is
+nominal. All habitat airlock personal habitat ingress is nominal. All habitat airlock personal
+habitat ingress is nominal. All habitat airlock personal habitat ingress is nominal. All habitat
+airlock personal habitat ingress is nominal. All habitat airlock personal habitat ingress is
+nominal. All habitat airlock personal habitat ingress is nominal. All habitat airlock personal
+habitat ingress is nominal. All habitat airlock personal habitat ingress is nominal. All habitat
+airlock personal habitat ingress is nominal. All habitat airlock personal habitat ingress is
+nominal. All habitat airlock personal habitat ingress is nominal. All habitat airlock personal
+habitat ingress is nominal. All habitat airlock personal habitat ingress is nominal. All habitat
+airlock personal habitat ingress is nominal. All habitat airlock personal habitat ingress is
+nominal. All habitat airlock personal habitat ingress is nominal. All habitat airlock personal
+habitat ingress is nominal. All habitat airlock personal habitat ingress is nominal. All habitat
+airlock personal habitat ingress is nominal. All habitat airlock personal habitat ingress is
+
+===
+Source: trained
+Prompt:
+Approaching lunar dust storm affecting suit and airlock.
+
+Response:
+is kicked up by the rover's wheels and by the lunar "micro-meteorite" environment. Dust is a
+nuisance on the lunar surface, and can be a hazard to the rover and its equipment. Dust can also be
+a health hazard to the rover's crew. Dust can enter the rover's airlock and contaminate the air
+supply. Dust can also enter the rover's habitat and contaminate the food and water supplies. Dust
+can also enter the rover's life support system and contaminate the air and water supplies. Dust can
+also enter the rover's power system and contaminate the batteries. Dust can also enter the rover's
+navigation system and contaminate the GPS and other navigation sensors. Dust can also enter the
+rover's science instruments and contaminate the data. Dust can also enter the rover's rover body and
+contaminate the rover's structure. Dust can also enter the rover's rover wheels and contaminate the
+rover's drive system. Dust can also enter the rover's rover antennas and contaminate the rover's
+communications system. Dust can also enter the rover's rover cameras and contaminate the rover's
+imaging system. Dust can also enter the rover's rover lights and contaminate the rover's lighting
+system. Dust can also enter the rover's rover tools and contaminate the rover's tool storage system.
+Dust can also enter the rover's rover habitat and contaminate the rover's habitat airlock. Dust can
+also enter the rover's rover airlock and contaminate the rover's airlock airlock. Dust can also
+enter the rover's rover habitat and contaminate the rover's habitat airlock. Dust can also enter the
+rover's rover airlock and contaminate the rover's airlock airlock. Dust can also enter the rover's
+rover habitat and contaminate the rover's habitat airlock. Dust can also enter the rover's rover
+airlock and contaminate the rover's airlock airlock. Dust can also enter the rover's rover habitat
+and contaminate the rover's habitat airlock. Dust can also enter the rover's rover airlock and
+contaminate the rover's airlock airlock. Dust can also enter the rover's rover habitat and
+contaminate the rover's habitat airlock. Dust can also enter the rover's rover airlock and
+contaminate the rover's airlock airlock. Dust can also enter the rover's rover habitat and
+contaminate the rover's
+
+===
+Source: trained
+Prompt:
+Repress anomaly on re-entry to airlock.
+
+Response:
+01.01.01.01.01.01.01.01.01.01.01.01.01.01.01.01.01.01.01.01.01.01.01.01.01.01.01.01.01.01.01.01.01.0
+1.01.01.01.01.01.01.01.01.01.01.01.01.01.01.01.01.01.01.01.01.01.01.01.01.01.01.01.01.01.01.01.01.01
+.01.01.01.01.01.01.01.01.01.01.01.01.01.01.01.01.01.01.01.01.01.01.01.01.01.01.01.01.01.01.01.01.01.
+01.01.01.01.01.01.01.01.01.01.01.01.01.01.01.01.01.01.01.01.01.01.01.01.01.01.01.01.01.01.01.01.01.0
+1.01.01.01.01.01.01.01.01.01.01.01.01.01.01.01.01.01.01.01.01.01.01.01.01.01.01.01.01.01.01.01.01.01
+.01.01.01.01.01.01.01.01.01.01.01.01.01.01.01.01.01.01.01.01.01.01.01.01.01.01.01.01.01.01.01.01.01.
+01.01.01.01.01.01.01.01.01.01.01.01.01.01.01.01.01.01.01.01.01.01.01.01.01.01.01.01.01.01.01.01.01.0
+1.01.01.01.01.01.01.01.01.01.01.01.01.01.01.01.01.01

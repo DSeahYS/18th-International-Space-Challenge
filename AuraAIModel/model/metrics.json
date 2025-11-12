@@ -1,0 +1,14 @@
+{
+  "data_hash": "c9144c3098c476fd8fffcdad432e24d6a1396a36040cff0e4d574abd550df209",
+  "config_hash": "9f6da9a9dbb25ea8093df845254d6407566c7a015dd9b81b249e22a9edbd650d",
+  "model_name": "meta-llama/Llama-3.1-8B",
+  "lora_rank": 32,
+  "learning_rate": 0.0001,
+  "epochs": 5,
+  "train_loss_curve": [],
+  "total_tokens": 12,
+  "examples_per_second": 0.05432798473072879,
+  "trained": true,
+  "cached": false,
+  "error": ""
+}

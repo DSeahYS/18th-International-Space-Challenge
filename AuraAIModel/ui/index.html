@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AURA EVA Procedure Assistant</title>
+    <link rel="stylesheet" href="/static/styles.css">
+</head>
+<body>
+    <header>
+        <div class="header-content">
+            <h1>AURA vs OpenRouter Comparison</h1>
+        </div>
+    </header>
+
+    <main>
+        <div class="comparison-container">
+            <div class="model-section aura-section">
+                <h2>AURA Fine-tuned Model</h2>
+                <div class="input-section">
+                    <label for="aura-query-input">Enter your EVA procedure query:</label>
+                    <textarea id="aura-query-input" placeholder="e.g., How to perform emergency depressurization procedure?" rows="4"></textarea>
+                    <button id="aura-submit-btn" class="submit-btn">Submit Query</button>
+                </div>
+
+                <div class="response-section">
+                    <div class="timing">Response Time: <span id="aura-timing">-- ms</span></div>
+                    <div id="aura-response-display" class="response-display">
+                        <p class="placeholder">Your response will appear here...</p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="model-section openrouter-section">
+                <h2>OpenRouter Base Model</h2>
+                <div class="input-section">
+                    <label for="openrouter-query-input">Enter your EVA procedure query:</label>
+                    <textarea id="openrouter-query-input" placeholder="e.g., How to perform emergency depressurization procedure?" rows="4"></textarea>
+                    <button id="openrouter-submit-btn" class="submit-btn">Submit Query</button>
+                </div>
+
+                <div class="response-section">
+                    <div class="timing">Response Time: <span id="openrouter-timing">-- ms</span></div>
+                    <div id="openrouter-response-display" class="response-display">
+                        <p class="placeholder">Your response will appear here...</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <footer>
+        <p>&copy; 2024 AURA EVA Procedure Assistant</p>
+    </footer>
+
+    <script src="/static/script.js"></script>
+</body>
+</html>

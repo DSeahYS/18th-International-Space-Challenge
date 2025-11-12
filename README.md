@@ -135,8 +135,6 @@ Real-time digital twin of astronaut's body and movements:
 │   ├── Dockerfile               # Container configuration
 │   ├── LICENSE                  # License file
 │   └── README.md                # Component documentation
-├── SimpleTowerOfChallenges/      # 🏗️ Challenge-related project
-├── TowerOfChallenges/            # 🎮 Separate challenge game project
 ├── specs/                        # 📋 Project specifications
 ├── exclude.txt                   # Git ignore patterns
 ├── markets.html                  # Market analysis

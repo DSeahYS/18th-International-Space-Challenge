@@ -75,19 +75,23 @@ Real-time digital twin of astronaut's body and movements:
 18th-International-Space-Challenge/
 ├── AuraAIModel/                  # 🧠 AI Brain & Comparison Demo
 │   ├── index.html                # Interactive AI comparison website
-│   ├── api.py                    # Python API server (Tinker, RAG, OpenRouter)
+│   ├── styles.css                # Green space theme styling
+│   ├── script.js                 # 3-model comparison logic
+│   ├── api.py                    # Python API server (FastAPI)
 │   ├── inference.py              # Model loading utilities
-│   ├── train_script.py           # Fine-tuning training script
+│   ├── train_script.py           # Tinker-based fine-tuning
 │   ├── api/                      # Vercel serverless functions
 │   │   ├── query.js             # AURA fine-tuned model API
 │   │   ├── rag.js               # Vanilla RAG implementation
 │   │   └── openrouter.js        # Base Llama model API
-│   ├── data/                    # Training datasets
+│   ├── data/                    # Training datasets (EVA procedures)
 │   ├── model/                   # Saved model artifacts
 │   ├── ui/                      # Alternative UI components
-│   ├── styles.css               # Green space theme
+│   ├── package.json              # Frontend dependencies
+│   ├── vercel.json               # Deployment configuration
+│   ├── vite.config.js            # Build configuration
 │   └── README.md                # AI technical documentation
-├── SpaceWebsite/                 # Main project website
+├── SpaceWebsite/                 # 🌐 Main project website
 │   ├── frontend/                 # Next.js website application
 │   │   ├── src/
 │   │   │   ├── app/              # Next.js app router pages
@@ -96,21 +100,48 @@ Real-time digital twin of astronaut's body and movements:
 │   │   │   │   ├── investors/    # Investor relations
 │   │   │   │   │   └── page.tsx  # Homepage
 │   │   │   └── components/       # React components
-│   │   └── package.json          # Frontend dependencies
+│   │   ├── public/               # Static assets
+│   │   ├── e2e/                  # End-to-end tests
+│   │   ├── test-results/         # Test output
+│   │   ├── package.json          # Frontend dependencies
+│   │   ├── next.config.ts        # Next.js configuration
+│   │   ├── tsconfig.json         # TypeScript configuration
+│   │   └── components.json       # Component configuration
 │   ├── memory/                   # Project documentation
-│   │   ├── spec.md              # Website specification
-│   │   ├── plan.md              # Tech stack and development plan
-│   │   └── constitution.md      # Project constitution
-│   ├── prototypes/              # System prototypes
-│   │   └── ai-brain/            # AI Brain prototype (Python)
-│   └── SpaceUI/                 # UI development tools
-├── AlphaGenome/                  # DNA sequence analysis model
-├── Astroskin/                    # Biometric monitoring system
-├── VPK AURA/                     # Neural Jacobian Fields (kinematic modeling)
-├── Aura TLTX/                    # Additional AURA components
-├── SimpleTowerOfChallenges/      # Challenge-related project
-├── TowerOfChallenges/            # Separate challenge game project
-└── specs/                        # Project specifications
+│   │   ├── constitution.md      # Project constitution
+│   │   ├── imagelocations.md    # Asset locations
+│   │   ├── module_flows.md      # System architecture
+│   │   ├── plan.md              # Development plan
+│   │   └── spec.md              # Technical specifications
+│   └── prototypes/              # System prototypes
+│       └── ai-brain/            # Legacy AI Brain prototype
+├── AlphaGenome/                  # 🧬 DNA sequence analysis model
+├── Astroskin/                    # 🫀 Biometric monitoring system
+│   ├── README.MD                # Component documentation
+│   ├── frontend/                # Web interface
+│   ├── specs/                   # Technical specifications
+│   ├── .github/                 # GitHub workflows
+│   └── .specify/                # Configuration files
+├── VPK AURA/                     # 🎯 Neural Jacobian Fields (kinematic modeling)
+│   ├── mujoco-phys-sim/         # Physics simulation
+│   ├── notebooks/               # Jupyter notebooks
+│   └── project/                 # Main project files
+├── Aura TLTX/                    # 🔄 Additional AURA components
+│   ├── chrome-extension/        # Browser extension
+│   ├── demo/                    # Demonstration files
+│   ├── docs/                    # Documentation
+│   ├── whisperlivekit/          # Audio processing
+│   ├── pyproject.toml           # Python project configuration
+│   ├── Dockerfile               # Container configuration
+│   ├── LICENSE                  # License file
+│   └── README.md                # Component documentation
+├── SimpleTowerOfChallenges/      # 🏗️ Challenge-related project
+├── TowerOfChallenges/            # 🎮 Separate challenge game project
+├── specs/                        # 📋 Project specifications
+├── exclude.txt                   # Git ignore patterns
+├── markets.html                  # Market analysis
+├── .gitignore                    # Git ignore rules
+└── README.md                     # This file
 ```
 
 ## Technology Stack
@@ -316,7 +347,7 @@ Advanced kinematic modeling system for real-time digital twin creation and embod
 
 ### Industry Mentors
 - **Don Balanzat**: XR & AI Systems Developer, ChaoticCuriosity
-- **Sanjeev Sharma**: Principal Dynamics Engineer, SpaceX (Retired)
+- **Sanjeev Sharma**: Principal Dynamics Engineer, SpaceX (Ex)
 - **Matthew Chew**: Nuclear Competency & Strategy Lead, HY
 
 ## Contributing

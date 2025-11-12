@@ -316,7 +316,7 @@ Advanced kinematic modeling system for real-time digital twin creation and embod
 
 ### Industry Mentors
 - **Don Balanzat**: XR & AI Systems Developer, ChaoticCuriosity
-- **Sanjeev Sharma**: Principal Dynamics Engineer, SpaceX (Retired)
+- **Sanjeev Sharma**: Principal Dynamics Engineer, SpaceX (Ex)
 - **Matthew Chew**: Nuclear Competency & Strategy Lead, HY
 
 ## Contributing

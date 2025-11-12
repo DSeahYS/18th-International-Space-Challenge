@@ -1,12 +1,33 @@
 # 18th International Space Challenge - Project AURA
 
 [![Website](https://img.shields.io/badge/Website-18th--international--space--challenge.vercel.app-blue)](https://18th-international-space-challenge.vercel.app/)
+[![AI Demo](https://img.shields.io/badge/AI--Demo-AuraAIModel-green)](https://github.com/DSeahYS/18th-International-Space-Challenge/tree/main/AuraAIModel)
 
 ## Project Overview
 
 **Project AURA (Autonomous Unified Reality Augmentation)** is a conceptual, suit-integrated support ecosystem designed for astronauts on long-duration, deep space missions where significant communication latency with Earth makes real-time ground support impossible.
 
 The core objective is to create a symbiotic human-AI partner that enhances astronaut autonomy, safety, and operational effectiveness by providing a suite of integrated, locally-processed capabilities.
+
+## 🚀 **AI Brain Demonstration - Why Fine-Tuning Matters**
+
+**Experience the technical superiority of AURA's AI approach** through our interactive comparison website:
+
+### **Three AI Models Compared:**
+| Feature | Vanilla LLM (Tourist) | RAG (Librarian) | **AURA Fine-Tuned (Partner)** |
+|---------|----------------------|-----------------|-------------------------------|
+| **Domain Knowledge** | ❌ None | ✅ Has the book | ✅ **Is the book** |
+| **Inference Speed** | Fast | ❌ Slow (Must search) | ✅ **Instant (Reflex)** |
+| **Context Window** | ✅ Free | ❌ Clogged (Full of PDF) | ✅ **Free (Ready for sensor data)** |
+| **Role** | Ignorant | Passive Tool | **Active Symbiote** |
+
+### **The Problem: Life-Critical, Real-Time Systems**
+AURA requires AI that meets three mission-critical criteria:
+- **Sovereign**: Works without Earth connection due to communication latency
+- **Instantaneous**: Sub-100ms response time for hazard detection
+- **Symbiote**: Active partner fusing live biometric/suit data
+
+**Try it yourself:** [AuraAIModel AI Comparison Demo](https://github.com/DSeahYS/18th-International-Space-Challenge/tree/main/AuraAIModel)
 
 ### The Vision
 
@@ -52,6 +73,20 @@ Real-time digital twin of astronaut's body and movements:
 
 ```
 18th-International-Space-Challenge/
+├── AuraAIModel/                  # 🧠 AI Brain & Comparison Demo
+│   ├── index.html                # Interactive AI comparison website
+│   ├── api.py                    # Python API server (Tinker, RAG, OpenRouter)
+│   ├── inference.py              # Model loading utilities
+│   ├── train_script.py           # Fine-tuning training script
+│   ├── api/                      # Vercel serverless functions
+│   │   ├── query.js             # AURA fine-tuned model API
+│   │   ├── rag.js               # Vanilla RAG implementation
+│   │   └── openrouter.js        # Base Llama model API
+│   ├── data/                    # Training datasets
+│   ├── model/                   # Saved model artifacts
+│   ├── ui/                      # Alternative UI components
+│   ├── styles.css               # Green space theme
+│   └── README.md                # AI technical documentation
 ├── SpaceWebsite/                 # Main project website
 │   ├── frontend/                 # Next.js website application
 │   │   ├── src/
@@ -59,7 +94,7 @@ Real-time digital twin of astronaut's body and movements:
 │   │   │   │   ├── features/     # Feature detail pages
 │   │   │   │   ├── team/         # Team information
 │   │   │   │   ├── investors/    # Investor relations
-│   │   │   │   └── page.tsx      # Homepage
+│   │   │   │   │   └── page.tsx  # Homepage
 │   │   │   └── components/       # React components
 │   │   └── package.json          # Frontend dependencies
 │   ├── memory/                   # Project documentation
@@ -88,12 +123,22 @@ Real-time digital twin of astronaut's body and movements:
 - **Charts**: Mermaid
 - **Hosting**: Vercel
 
+### AI Brain & Comparison Demo
+- **Fine-Tuning Framework**: Tinker (distributed training)
+- **Base Models**: Llama-3.1-8B-Instruct, Qwen, DeepSeek
+- **Training Data**: EVA procedures, technical manuals
+- **Comparison APIs**: OpenRouter, Custom RAG implementation
+- **Frontend**: Vanilla JavaScript, NASA-inspired green theme
+- **Backend**: FastAPI (Python), Vercel serverless functions
+
 ### AI & Machine Learning Components
 - **AI Brain**: Python, TensorFlow Lite, Akka Platform
 - **Multi-Agent System**: Microsoft AutoGen
 - **Biometric Processing**: Custom algorithms for physiological data
 - **Generative Design**: Integration with CAD tools
 - **Kinematic Modeling**: Neural Jacobian Fields
+- **Fine-Tuning**: LoRA adaptation, supervised learning
+- **Real-Time Inference**: Sub-100ms response requirements
 
 ### Hardware Integration
 - **AR/XR**: Microsoft HoloLens 3 or Varjo XR-4
@@ -105,36 +150,62 @@ Real-time digital twin of astronaut's body and movements:
 
 ### Prerequisites
 - Node.js 18+
-- Python 3.10+ (for AI prototypes)
+- Python 3.10+ (for AI components)
 - Git
 
-### Running the Website Locally
+### 🚀 **AI Brain Comparison Demo**
 
-1. **Clone the repository**
+**Experience AURA's AI superiority firsthand:**
+
+1. **Navigate to AI demo directory**
    ```bash
-   git clone https://github.com/your-org/18th-International-Space-Challenge.git
-   cd 18th-International-Space-Challenge
+   cd AuraAIModel
    ```
 
-2. **Navigate to the website directory**
-   ```bash
-   cd SpaceWebsite/frontend
-   ```
-
-3. **Install dependencies**
+2. **Install frontend dependencies**
    ```bash
    npm install
    ```
 
-4. **Run the development server**
+3. **Start the frontend**
+   ```bash
+   npm run dev
+   ```
+   Visit [http://localhost:3000](http://localhost:3000) for the AI comparison interface
+
+4. **Start the backend API** (in a separate terminal)
+   ```bash
+   python api.py
+   ```
+   API runs on [http://localhost:5000](http://localhost:5000)
+
+**What you'll see:**
+- **AURA Fine-tuned**: Instant EVA procedure responses
+- **Vanilla RAG**: Slower retrieval-based answers
+- **Base Llama**: General AI without domain knowledge
+- **Performance metrics**: Response times and token usage
+
+### Running the Main Website
+
+1. **Navigate to the website directory**
+   ```bash
+   cd SpaceWebsite/frontend
+   ```
+
+2. **Install dependencies**
+   ```bash
+   npm install
+   ```
+
+3. **Run the development server**
    ```bash
    npm run dev
    ```
 
-5. **Open your browser**
+4. **Open your browser**
    Navigate to [http://localhost:3000](http://localhost:3000)
 
-### Running AI Prototypes
+### Running Legacy AI Prototypes
 
 1. **Navigate to AI Brain prototype**
    ```bash
@@ -152,6 +223,18 @@ Real-time digital twin of astronaut's body and movements:
    ```
 
 ## Key Components
+
+### 🧠 AuraAIModel - AI Brain & Technical Demonstration
+**The heart of AURA's AI capabilities** - Interactive comparison website demonstrating why fine-tuned AI is essential for space applications:
+
+- **3-Model Comparison**: AURA Fine-tuned vs Vanilla RAG vs Base Llama
+- **Real-Time Metrics**: Response times, token usage, performance analysis
+- **Technical Validation**: Proves fine-tuning superiority for life-critical systems
+- **Training Scripts**: Tinker-based fine-tuning on EVA procedures
+- **API Endpoints**: RESTful APIs for all three AI approaches
+- **Professional UI**: NASA-inspired green space theme
+
+**Live Demo**: [AuraAIModel Directory](https://github.com/DSeahYS/18th-International-Space-Challenge/tree/main/AuraAIModel)
 
 ### SpaceWebsite
 The main project showcase website featuring:
@@ -182,8 +265,14 @@ Advanced kinematic modeling system for real-time digital twin creation and embod
 - AI Brain prototype implementation
 - Component documentation
 
+### Phase 2.5: AI Brain Technical Validation ✅
+- **AURA Fine-tuned AI**: Tinker-based training on EVA procedures
+- **3-Model Comparison Demo**: Interactive website proving fine-tuning superiority
+- **Technical Documentation**: Why RAG fails for life-critical systems
+- **Performance Metrics**: Real-time speed and accuracy comparisons
+
 ### Phase 3: System Prototyping 🔄
-- Sovereign AI Brain development
+- Sovereign AI Brain development (core validated ✅)
 - AR/XR interface prototyping
 - Biometric monitoring system
 - ACE module development
@@ -234,9 +323,10 @@ Advanced kinematic modeling system for real-time digital twin creation and embod
 
 This repository contains multiple interconnected projects. Please see individual component READMEs for specific contribution guidelines:
 
-- [SpaceWebsite/frontend/README.md](SpaceWebsite/frontend/README.md)
-- [AlphaGenome/README.md](AlphaGenome/README.md)
-- [VPK AURA/README.md](VPK AURA/README.md)
+- [AuraAIModel/README.md](AuraAIModel/README.md) - AI Brain & Comparison Demo
+- [SpaceWebsite/frontend/README.md](SpaceWebsite/frontend/README.md) - Main Website
+- [AlphaGenome/README.md](AlphaGenome/README.md) - DNA Analysis
+- [VPK AURA/README.md](VPK AURA/README.md) - Kinematic Modeling
 
 ## License
 

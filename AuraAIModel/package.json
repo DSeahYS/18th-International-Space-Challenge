@@ -1,0 +1,20 @@
+{
+  "name": "aura-ai-website",
+  "version": "1.0.0",
+  "description": "AURA AI - EVA Procedure Assistant Website",
+  "main": "index.js",
+  "scripts": {
+    "dev": "vite",
+    "build": "vite build",
+    "preview": "vite preview"
+  },
+  "dependencies": {
+    "vite": "^5.0.0"
+  },
+  "devDependencies": {
+    "@types/node": "^20.0.0"
+  },
+  "keywords": ["AI", "EVA", "Space", "NASA", "AURA"],
+  "author": "DSeahYS",
+  "license": "MIT"
+}

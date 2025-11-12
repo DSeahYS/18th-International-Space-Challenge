@@ -158,7 +158,7 @@ document.addEventListener('DOMContentLoaded', function() {
         }
 
         const data = await response.json();
-        return data.response;
+        return data.answer;
     }
 
     function displayResponse(display, response) {

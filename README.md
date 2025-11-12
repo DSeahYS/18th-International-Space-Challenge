@@ -220,21 +220,15 @@ Advanced kinematic modeling system for real-time digital twin creation and embod
 ## Team & Partners
 
 ### Core Development Team
-- **Dave Seah Yong Sheng**: Architecture & Research Lead
-- **Darren Seah Yong Liang**: AI & Automation Lead
+- **Dave Seah Yong Sheng**: Founder, Chief Architect, and Chief Research
+- **Darren Seah Yong Liang**: Co-Founder, AI Flow & Automation Lead
 - **Timothy Isaac Chua**: Biometric Suit & Human Factors Lead
 - **Wong Jia Sheng Timothy**: ACE Module Lead
 
 ### Industry Mentors
-- **Don Balanzat**: XR & AI Systems Developer, Blue Origin
+- **Don Balanzat**: XR & AI Systems Developer, ChaoticCuriosity
 - **Sanjeev Sharma**: Principal Dynamics Engineer, SpaceX (Retired)
 - **Matthew Chew**: Nuclear Competency & Strategy Lead, HY
-
-### Strategic Partners
-- NASA (Strategic Partner)
-- SpaceX (Technology Collaborator)
-- ESA (Research Partner)
-- MIT (Academic Partner)
 
 ## Contributing
 

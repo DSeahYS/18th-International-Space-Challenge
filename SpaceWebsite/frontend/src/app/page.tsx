@@ -84,7 +84,7 @@ export default function Home() {
         // Create back button
         const backButton = document.createElement('button');
         backButton.innerHTML = '← Back to Overview';
-        backButton.className = 'absolute top-4 left-4 z-20 bg-blue-600 hover:bg-blue-700 text-white px-4 py-2 rounded-lg font-semibold transition-colors shadow-lg';
+        backButton.className = 'absolute top-4 left-4 z-20 bg-[#FF6500] hover:bg-[#CC5200] text-white px-4 py-2 rounded-lg font-semibold transition-colors shadow-lg';
         backButton.style.display = 'none';
         flowchartContainer.appendChild(backButton);
 
@@ -466,9 +466,9 @@ export default function Home() {
     });
   }, []);
   return (
-    <div className="bg-gradient-to-br from-slate-900 via-blue-900 to-black text-white">
+    <div className="bg-gradient-to-br from-black via-[#0B192C] to-black text-white">
       {/* Header */}
-      <header className="sticky top-0 z-50 bg-slate-800/95 backdrop-blur-sm py-4 px-4 border-b border-slate-700">
+      <header className="sticky top-0 z-50 bg-[#0B192C]/95 backdrop-blur-sm py-4 px-4 border-b border-slate-700">
         <nav className="max-w-6xl mx-auto flex items-center justify-between">
           <Link href="/" className="flex items-center space-x-3">
             <Image
@@ -478,22 +478,22 @@ export default function Home() {
               height={48}
               className="object-contain"
             />
-            <span className="text-2xl font-bold text-blue-400">Project AURA</span>
+            <span className="text-2xl font-bold text-[#FF6500]">Project AURA</span>
           </Link>
           <div className="flex space-x-6">
-            <Link href="/" className="hover:text-blue-400 transition-colors">
+            <Link href="/" className="hover:text-[#FF6500] transition-colors">
               Home
             </Link>
-            <Link href="/features/sovereign-ai-brain" className="hover:text-blue-400 transition-colors">
+            <Link href="/features/sovereign-ai-brain" className="hover:text-[#FF6500] transition-colors">
               Features
             </Link>
-            <Link href="/team" className="hover:text-blue-400 transition-colors">
+            <Link href="/team" className="hover:text-[#FF6500] transition-colors">
               Team
             </Link>
-            <Link href="/investors" className="hover:text-blue-400 transition-colors">
+            <Link href="/investors" className="hover:text-[#FF6500] transition-colors">
               Investors
             </Link>
-            <Link href="/#vision" className="hover:text-blue-400 transition-colors">
+            <Link href="/#vision" className="hover:text-[#FF6500] transition-colors">
               Vision
             </Link>
           </div>
@@ -515,14 +515,14 @@ export default function Home() {
 
         {/* Content */}
         <div className="relative z-10">
-          <h1 className="text-5xl md:text-7xl font-bold mb-6 bg-gradient-to-r from-blue-400 to-purple-600 bg-clip-text text-transparent">
+          <h1 className="text-5xl md:text-7xl font-bold mb-6 bg-gradient-to-r from-[#FF6500] to-[#1E3E62] bg-clip-text text-transparent">
             Project AURA: Autonomous Unified Reality Augmentation
           </h1>
           <p className="text-xl md:text-2xl mb-8 max-w-2xl text-white drop-shadow-lg">
             THE ONBOARD AI THAT THINKS WITH YOU, NOT FOR YOU.
           </p>
           <div className="flex flex-col sm:flex-row gap-4 hero-buttons">
-            <Link href="#vision" className="bg-blue-600 hover:bg-blue-700 px-8 py-3 rounded-lg font-semibold transition-colors text-center shadow-lg">
+            <Link href="#vision" className="bg-[#FF6500] hover:bg-[#CC5200] px-8 py-3 rounded-lg font-semibold transition-colors text-center shadow-lg">
               Learn More
             </Link>
             <Link href="/features/sovereign-ai-brain" className="border border-white hover:bg-white hover:text-black px-8 py-3 rounded-lg font-semibold transition-colors text-center shadow-lg">
@@ -533,7 +533,7 @@ export default function Home() {
       </section>
 
       {/* Vision Section */}
-      <section className="py-20 px-4 bg-slate-800">
+      <section className="py-20 px-4 bg-[#0B192C]">
         <div className="max-w-4xl mx-auto text-center">
           <h2 className="text-4xl md:text-5xl font-bold mb-8">The Vision: Why Project AURA?</h2>
           <p className="text-lg md:text-xl leading-relaxed mb-6">
@@ -554,42 +554,42 @@ export default function Home() {
           <h2 className="text-4xl md:text-5xl font-bold text-center mb-12">Core Features Explained</h2>
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
             <Link href="/features/sovereign-ai-brain" className="block feature-card">
-              <div className="bg-slate-800 p-6 rounded-lg text-center hover:bg-slate-700 transition-colors cursor-pointer">
-                <Brain className="w-12 h-12 mx-auto mb-4 text-blue-400" />
+              <div className="bg-[#0B192C] p-6 rounded-lg text-center hover:bg-[#1E3E62] transition-colors cursor-pointer">
+                <Brain className="w-12 h-12 mx-auto mb-4 text-[#FF6500]" />
                 <h3 className="text-xl font-semibold mb-2">Sovereign AI Brain</h3>
                 <p className="text-gray-300">The system requires a central, self-contained AI core that operates entirely offline. This AI must function as a multi-agent system, with specialized agents to manage and deliver mission procedures and technical manuals, monitor and analyze telemetry data from the suit and surrounding equipment for anomalies, provide real-time spatial mapping and navigational pathfinding, and interpret incoming biometric data to understand the astronaut's state.</p>
               </div>
             </Link>
             <Link href="/features/adaptive-ar-xr-visual-interface" className="block feature-card">
-              <div className="bg-slate-800 p-6 rounded-lg text-center hover:bg-slate-700 transition-colors cursor-pointer">
+              <div className="bg-[#0B192C] p-6 rounded-lg text-center hover:bg-[#1E3E62] transition-colors cursor-pointer">
                 <Eye className="w-12 h-12 mx-auto mb-4 text-green-400" />
                 <h3 className="text-xl font-semibold mb-2">Adaptive AR/XR Visual Interface</h3>
                 <p className="text-gray-300">The primary user interface should be an augmented reality display integrated into the astronaut's helmet. Key features must include an "Auto-Dashboarding" paradigm, where the UI dynamically adapts the amount and type of information displayed based on the astronaut's current task, location, and inferred physiological state (e.g., high stress), and interactive, voice-controlled procedural and navigational guidance, with the ability to overlay instructions, schematics, and directional cues directly onto the physical environment.</p>
               </div>
             </Link>
             <Link href="/features/closed-loop-biometric-monitoring" className="block feature-card">
-              <div className="bg-slate-800 p-6 rounded-lg text-center hover:bg-slate-700 transition-colors cursor-pointer">
+              <div className="bg-[#0B192C] p-6 rounded-lg text-center hover:bg-[#1E3E62] transition-colors cursor-pointer">
                 <Heart className="w-12 h-12 mx-auto mb-4 text-red-400" />
                 <h3 className="text-xl font-semibold mb-2">Closed-Loop Biometric Monitoring</h3>
                 <p className="text-gray-300">The system must incorporate a continuous, non-invasive biometric monitoring capability. It needs to collect and process real-time physiological data (ECG, HRV, respiration, etc.), and the AI Brain must use this data stream to infer the astronaut's physical and psychological state (e.g., fatigue, cognitive load, stress), creating a closed feedback loop allowing the system to proactively adjust the AR interface or provide alerts based on the astronaut's condition.</p>
               </div>
             </Link>
             <Link href="/features/adaptive-contingency-engineering-ace-module" className="block feature-card">
-              <div className="bg-slate-800 p-6 rounded-lg text-center hover:bg-slate-700 transition-colors cursor-pointer">
+              <div className="bg-[#0B192C] p-6 rounded-lg text-center hover:bg-[#1E3E62] transition-colors cursor-pointer">
                 <Wrench className="w-12 h-12 mx-auto mb-4 text-yellow-400" />
                 <h3 className="text-xl font-semibold mb-2">Adaptive Contingency Engineering (ACE) Module</h3>
                 <p className="text-gray-300">For handling unforeseen hardware failures where no spare parts exist, the system requires a generative problem-solving module. The workflow should enable an astronaut to capture the geometry of a broken component using a 3D scanner, define functional requirements and constraints for a replacement part using natural language voice commands, utilize a generative AI to design a novel, structurally sound, and 3D-printable component that meets those constraints, and verify the generated design in the AR interface before sending it to an onboard 3D printer for autonomous manufacturing.</p>
               </div>
             </Link>
             <Link href="/features/embodied-kinematic-model-vpk" className="block feature-card">
-              <div className="bg-slate-800 p-6 rounded-lg text-center hover:bg-slate-700 transition-colors cursor-pointer">
+              <div className="bg-[#0B192C] p-6 rounded-lg text-center hover:bg-[#1E3E62] transition-colors cursor-pointer">
                 <User className="w-12 h-12 mx-auto mb-4 text-purple-400" />
                 <h3 className="text-xl font-semibold mb-2">Embodied Kinematic Model (VPK)</h3>
                 <p className="text-gray-300">The system needs to create and maintain a real-time, adaptive digital twin of the astronaut's own body and movements. This kinematic model is essential for enabling "body-centric" AR guidance, where visual cues are relative to the astronaut's limbs and field of view, performing ergonomic validation to ensure that any component designed by the ACE module is physically installable by the astronaut, and fusing movement data with biometric data to help the AI better differentiate between physical exertion and psychological stress.</p>
               </div>
             </Link>
             <Link href="/alphagenome" className="block feature-card">
-              <div className="bg-slate-800 p-6 rounded-lg text-center hover:bg-slate-700 transition-colors cursor-pointer">
+              <div className="bg-[#0B192C] p-6 rounded-lg text-center hover:bg-[#1E3E62] transition-colors cursor-pointer">
                 <User className="w-12 h-12 mx-auto mb-4 text-teal-400" />
                 <h3 className="text-xl font-semibold mb-2">AlphaGenome Genomic Insight Engine</h3>
                 <p className="text-gray-300">
@@ -605,19 +605,19 @@ export default function Home() {
       </section>
 
       {/* Overall System Integration Section */}
-      <section className="py-20 px-4 bg-slate-800">
+      <section className="py-20 px-4 bg-[#0B192C]">
         <div className="max-w-6xl mx-auto">
           <h2 className="text-4xl md:text-5xl font-bold text-center mb-8">How It All Works Together</h2>
           <p className="text-lg md:text-xl text-center mb-12 text-gray-300">
             Project AURA's modules form a cohesive, symbiotic system that adapts to astronaut needs in real-time.
           </p>
-          <div className="bg-slate-700 p-8 rounded-lg relative overflow-hidden">
+          <div className="bg-[#1E3E62] p-8 rounded-lg relative overflow-hidden">
             {/* Zoom Controls */}
             <div className="absolute top-4 right-4 z-10 flex flex-col gap-2">
-              <button className="zoom-in bg-blue-600 hover:bg-blue-700 text-white px-3 py-2 rounded-lg font-semibold transition-colors shadow-lg text-sm">
+              <button className="zoom-in bg-[#FF6500] hover:bg-[#CC5200] text-white px-3 py-2 rounded-lg font-semibold transition-colors shadow-lg text-sm">
                 +
               </button>
-              <button className="zoom-out bg-blue-600 hover:bg-blue-700 text-white px-3 py-2 rounded-lg font-semibold transition-colors shadow-lg text-sm">
+              <button className="zoom-out bg-[#FF6500] hover:bg-[#CC5200] text-white px-3 py-2 rounded-lg font-semibold transition-colors shadow-lg text-sm">
                 −
               </button>
               <button className="zoom-reset bg-gray-600 hover:bg-gray-700 text-white px-3 py-2 rounded-lg font-semibold transition-colors shadow-lg text-sm">
@@ -643,7 +643,7 @@ export default function Home() {
       </section>
 
       {/* Integrated System in Action Section */}
-      <section className="py-20 px-4 bg-slate-800">
+      <section className="py-20 px-4 bg-[#0B192C]">
         <div className="max-w-6xl mx-auto">
           <h2 className="text-4xl md:text-5xl font-bold text-center mb-12">Integrated System in Action</h2>
           <p className="text-lg md:text-xl text-center mb-12 text-gray-300">
@@ -651,13 +651,13 @@ export default function Home() {
           </p>
           <div className="flex flex-col md:flex-row items-center justify-center space-y-8 md:space-y-0 md:space-x-8">
             <div className="flex flex-col items-center text-center">
-              <div className="system-circle w-16 h-16 bg-blue-600 rounded-full flex items-center justify-center mb-4 cursor-pointer">
+              <div className="system-circle w-16 h-16 bg-[#FF6500] rounded-full flex items-center justify-center mb-4 cursor-pointer">
                 <span className="text-2xl font-bold">1</span>
               </div>
               <h3 className="text-xl font-semibold mb-2">EVA Task Initiated</h3>
               <p className="text-gray-300">Astronaut begins extravehicular activity; AR interface provides initial guidance.</p>
             </div>
-            <div className="hidden md:block text-4xl text-blue-400">→</div>
+            <div className="hidden md:block text-4xl text-[#FF6500]">→</div>
             <div className="flex flex-col items-center text-center">
               <div className="system-circle w-16 h-16 bg-red-600 rounded-full flex items-center justify-center mb-4 cursor-pointer">
                 <span className="text-2xl font-bold">2</span>
@@ -706,39 +706,39 @@ export default function Home() {
             Powered by advanced AI and space-grade technologies for autonomous astronaut support.
           </p>
           <div className="grid grid-cols-3 md:grid-cols-3 gap-6">
-            <div className="tech-box bg-slate-800 p-4 rounded-lg cursor-pointer">
+            <div className="tech-box bg-[#0B192C] p-4 rounded-lg cursor-pointer">
               <h3 className="text-lg font-semibold mb-2">AMD XQR Versal AI Core</h3>
               <p className="text-sm text-gray-300">Radiation-hardened AI processing unit optimized for space environments</p>
             </div>
-            <div className="tech-box bg-slate-800 p-4 rounded-lg cursor-pointer">
+            <div className="tech-box bg-[#0B192C] p-4 rounded-lg cursor-pointer">
               <h3 className="text-lg font-semibold mb-2">Mistral 7B LLM</h3>
               <p className="text-sm text-gray-300">Fine-tuned language model for NASA mission procedures</p>
             </div>
-            <div className="tech-box bg-slate-800 p-4 rounded-lg cursor-pointer">
+            <div className="tech-box bg-[#0B192C] p-4 rounded-lg cursor-pointer">
               <h3 className="text-lg font-semibold mb-2">n8n Orchestration</h3>
               <p className="text-sm text-gray-300">Multi-agent system workflow automation</p>
             </div>
-            <div className="tech-box bg-slate-800 p-4 rounded-lg cursor-pointer">
+            <div className="tech-box bg-[#0B192C] p-4 rounded-lg cursor-pointer">
               <h3 className="text-lg font-semibold mb-2">Astroskin Biometric</h3>
               <p className="text-sm text-gray-300">Non-invasive physiological monitoring system</p>
             </div>
-            <div className="tech-box bg-slate-800 p-4 rounded-lg cursor-pointer">
+            <div className="tech-box bg-[#0B192C] p-4 rounded-lg cursor-pointer">
               <h3 className="text-lg font-semibold mb-2">Zoo CAD & Meshy.ai</h3>
               <p className="text-sm text-gray-300">AI-powered generative design tools</p>
             </div>
-            <div className="tech-box bg-slate-800 p-4 rounded-lg cursor-pointer">
+            <div className="tech-box bg-[#0B192C] p-4 rounded-lg cursor-pointer">
               <h3 className="text-lg font-semibold mb-2">Neural Jacobian Fields</h3>
               <p className="text-sm text-gray-300">Advanced kinematic modeling for embodied movement</p>
             </div>
-            <div className="tech-box bg-slate-800 p-4 rounded-lg cursor-pointer">
+            <div className="tech-box bg-[#0B192C] p-4 rounded-lg cursor-pointer">
               <h3 className="text-lg font-semibold mb-2">META AI Glasses</h3>
               <p className="text-sm text-gray-300">Industrial AR display for real-time guidance</p>
             </div>
-            <div className="tech-box bg-slate-800 p-4 rounded-lg cursor-pointer">
+            <div className="tech-box bg-[#0B192C] p-4 rounded-lg cursor-pointer">
               <h3 className="text-lg font-semibold mb-2">Hybrid Betavoltaic PPU</h3>
               <p className="text-sm text-gray-300">Reliable power system for space applications</p>
             </div>
-            <div className="tech-box bg-slate-800 p-4 rounded-lg cursor-pointer">
+            <div className="tech-box bg-[#0B192C] p-4 rounded-lg cursor-pointer">
               <h3 className="text-lg font-semibold mb-2">Synthing Updates</h3>
               <p className="text-sm text-gray-300">Secure over-the-air update system</p>
             </div>
@@ -747,12 +747,12 @@ export default function Home() {
       </section>
 
       {/* Market Opportunity Section */}
-      <section className="py-20 px-4 bg-slate-800">
+      <section className="py-20 px-4 bg-[#0B192C]">
         <div className="max-w-6xl mx-auto">
           <h2 className="text-4xl md:text-5xl font-bold text-center mb-12">Market Opportunities</h2>
           <div className="grid grid-cols-1 md:grid-cols-2 gap-12">
-            <div className="bg-slate-700 p-8 rounded-lg">
-              <h3 className="text-2xl font-semibold mb-6 text-blue-400">Competitive Advantages Over Existing AR Platforms</h3>
+            <div className="bg-[#1E3E62] p-8 rounded-lg">
+              <h3 className="text-2xl font-semibold mb-6 text-[#FF6500]">Competitive Advantages Over Existing AR Platforms</h3>
               <ul className="text-gray-300 space-y-3">
                 <li>• <strong>Sovereign AI Architecture:</strong> Air-gapped, radiation-hardened system with no external dependencies</li>
                 <li>• <strong>Biometric-Adaptive Interface:</strong> Real-time physiological monitoring drives adaptive AR UI overlays</li>
@@ -760,7 +760,7 @@ export default function Home() {
                 <li>• <strong>Generative Engineering:</strong> ACE module for on-demand component design and additive manufacturing</li>
               </ul>
             </div>
-            <div className="bg-slate-700 p-8 rounded-lg">
+            <div className="bg-[#1E3E62] p-8 rounded-lg">
               <h3 className="text-2xl font-semibold mb-6 text-green-400">Dual-Use Applications</h3>
               <div className="space-y-6">
                 <div>
@@ -794,7 +794,7 @@ export default function Home() {
                 />
               </div>
             </div>
-            <div className="bg-slate-700 p-8 rounded-lg">
+            <div className="bg-[#1E3E62] p-8 rounded-lg">
               <h3 className="text-2xl font-semibold mb-6 text-purple-400">Business Projections</h3>
               <div className="space-y-4">
                 <div className="flex justify-between items-center">
@@ -828,7 +828,7 @@ export default function Home() {
                 />
               </div>
             </div>
-            <div className="bg-slate-700 p-8 rounded-lg">
+            <div className="bg-[#1E3E62] p-8 rounded-lg">
               <h3 className="text-2xl font-semibold mb-6 text-yellow-400">Legal/Ethical Notes</h3>
               <ul className="text-gray-300 space-y-3">
                 <li>• <strong>AI Usage Declaration:</strong> All generative AI outputs heavily modified with factual research</li>
@@ -841,12 +841,12 @@ export default function Home() {
       </section>
 
       {/* Development Roadmap Section */}
-      <section className="py-20 px-4 bg-slate-800">
+      <section className="py-20 px-4 bg-[#0B192C]">
         <div className="max-w-6xl mx-auto">
           <h2 className="text-4xl md:text-5xl font-bold text-center mb-12">Development Roadmap</h2>
           <div className="grid grid-cols-1 md:grid-cols-2 gap-12">
-            <div className="bg-slate-700 p-8 rounded-lg">
-              <h3 className="text-2xl font-semibold mb-6 text-blue-400">Gantt Chart Milestones</h3>
+            <div className="bg-[#1E3E62] p-8 rounded-lg">
+              <h3 className="text-2xl font-semibold mb-6 text-[#FF6500]">Gantt Chart Milestones</h3>
               <div className="space-y-4">
                 <div className="flex items-center">
                   <div className="flex-shrink-0 w-4 h-4 bg-blue-500 rounded-full mr-3"></div>
@@ -892,7 +892,7 @@ export default function Home() {
                 </div>
               </div>
             </div>
-            <div className="bg-slate-700 p-8 rounded-lg">
+            <div className="bg-[#1E3E62] p-8 rounded-lg">
               <h3 className="text-2xl font-semibold mb-6 text-green-400">Budget Breakdown</h3>
               <div className="space-y-6">
                 <div>
@@ -924,13 +924,13 @@ export default function Home() {
       </section>
 
       {/* Partnerships & Testimonials Section */}
-      <section className="py-20 px-4 bg-slate-800">
+      <section className="py-20 px-4 bg-[#0B192C]">
         <div className="max-w-6xl mx-auto">
           <h2 className="text-4xl md:text-5xl font-bold text-center mb-12">Trusted by Industry Leaders</h2>
 
           {/* Partnership Logos */}
           <div className="grid grid-cols-2 md:grid-cols-4 gap-8 mb-16">
-            <div className="bg-slate-700 p-6 rounded-lg text-center hover:bg-slate-600 transition-colors cursor-pointer partner-logo">
+            <div className="bg-[#1E3E62] p-6 rounded-lg text-center hover:bg-[#1E3E62] transition-colors cursor-pointer partner-logo">
               <Image
                 src="/images/partners/nasa-logo.png"
                 alt="NASA Logo"
@@ -940,7 +940,7 @@ export default function Home() {
               />
               <p className="text-sm text-gray-300">Strategic Partner</p>
             </div>
-            <div className="bg-slate-700 p-6 rounded-lg text-center hover:bg-slate-600 transition-colors cursor-pointer partner-logo">
+            <div className="bg-[#1E3E62] p-6 rounded-lg text-center hover:bg-[#1E3E62] transition-colors cursor-pointer partner-logo">
               <Image
                 src="/images/partners/spacex-logo.png"
                 alt="SpaceX Logo"
@@ -950,7 +950,7 @@ export default function Home() {
               />
               <p className="text-sm text-gray-300">Technology Collaborator</p>
             </div>
-            <div className="bg-slate-700 p-6 rounded-lg text-center hover:bg-slate-600 transition-colors cursor-pointer partner-logo">
+            <div className="bg-[#1E3E62] p-6 rounded-lg text-center hover:bg-[#1E3E62] transition-colors cursor-pointer partner-logo">
               <Image
                 src="/images/partners/esa-logo.png"
                 alt="ESA Logo"
@@ -960,7 +960,7 @@ export default function Home() {
               />
               <p className="text-sm text-gray-300">Research Partner</p>
             </div>
-            <div className="bg-slate-700 p-6 rounded-lg text-center hover:bg-slate-600 transition-colors cursor-pointer partner-logo">
+            <div className="bg-[#1E3E62] p-6 rounded-lg text-center hover:bg-[#1E3E62] transition-colors cursor-pointer partner-logo">
               <Image
                 src="/images/partners/mit-logo.png"
                 alt="MIT Logo"
@@ -974,14 +974,14 @@ export default function Home() {
 
           {/* Testimonials */}
           <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
-            <div className="bg-slate-700 p-8 rounded-lg">
+            <div className="bg-[#1E3E62] p-8 rounded-lg">
               <p className="text-gray-300 mb-4 italic">
                 "Project AURA represents a breakthrough in astronaut autonomy. The integration of AI with human factors is exactly what deep space missions need."
               </p>
               <div className="font-semibold">[Name Censored]</div>
-              <div className="text-blue-400">[Title Censored]</div>
+              <div className="text-[#FF6500]">[Title Censored]</div>
             </div>
-            <div className="bg-slate-700 p-8 rounded-lg">
+            <div className="bg-[#1E3E62] p-8 rounded-lg">
               <p className="text-gray-300 mb-4 italic">
                 "The potential to reduce mission risk while enhancing astronaut performance is enormous. We're excited to collaborate on this technology."
               </p>
@@ -999,7 +999,7 @@ export default function Home() {
           <p className="text-lg md:text-xl mb-12 text-gray-300">
             Watch our prototype demonstration showcasing the integrated AI systems working together.
           </p>
-          <div className="bg-slate-800 p-8 rounded-lg">
+          <div className="bg-[#0B192C] p-8 rounded-lg">
             <div className="aspect-video bg-gray-700 rounded-lg overflow-hidden mb-4">
               <iframe
                 width="100%"
@@ -1020,12 +1020,12 @@ export default function Home() {
       </section>
 
       {/* Case Studies Section */}
-      <section className="py-20 px-4 bg-slate-800">
+      <section className="py-20 px-4 bg-[#0B192C]">
         <div className="max-w-6xl mx-auto">
           <h2 className="text-4xl md:text-5xl font-bold text-center mb-12">Potential Impact Scenarios</h2>
           <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
-            <div className="bg-slate-700 p-8 rounded-lg">
-              <h3 className="text-2xl font-semibold mb-4 text-blue-400">Deep Space Mission</h3>
+            <div className="bg-[#1E3E62] p-8 rounded-lg">
+              <h3 className="text-2xl font-semibold mb-4 text-[#FF6500]">Deep Space Mission</h3>
               <p className="text-gray-300 mb-4">
                 During a Mars mission, an astronaut experiences equipment failure 200 million km from Earth. AURA's ACE module scans the broken component, designs a replacement part, and guides 3D printing - all autonomously.
               </p>
@@ -1033,7 +1033,7 @@ export default function Home() {
                 <strong>Outcome:</strong> Mission continues without Earth intervention, saving weeks of communication delay.
               </div>
             </div>
-            <div className="bg-slate-700 p-8 rounded-lg">
+            <div className="bg-[#1E3E62] p-8 rounded-lg">
               <h3 className="text-2xl font-semibold mb-4 text-green-400">Emergency Response</h3>
               <p className="text-gray-300 mb-4">
                 Astronaut shows signs of hypoxia. AURA detects biometric changes, simplifies AR interface to reduce cognitive load, and provides step-by-step emergency protocols while monitoring vital signs.
@@ -1042,7 +1042,7 @@ export default function Home() {
                 <strong>Outcome:</strong> Rapid response prevents critical situation, astronaut safely manages emergency.
               </div>
             </div>
-            <div className="bg-slate-700 p-8 rounded-lg">
+            <div className="bg-[#1E3E62] p-8 rounded-lg">
               <h3 className="text-2xl font-semibold mb-4 text-purple-400">Complex Repair</h3>
               <p className="text-gray-300 mb-4">
                 EVA suit telemetry indicates pressure anomaly. AURA analyzes data, overlays repair instructions on the suit, and validates ergonomic feasibility using the VPK model.
@@ -1051,7 +1051,7 @@ export default function Home() {
                 <strong>Outcome:</strong> Successful repair completed 40% faster with reduced error risk.
               </div>
             </div>
-            <div className="bg-slate-700 p-8 rounded-lg">
+            <div className="bg-[#1E3E62] p-8 rounded-lg">
               <h3 className="text-2xl font-semibold mb-4 text-yellow-400">Navigation Challenge</h3>
               <p className="text-gray-300 mb-4">
                 Astronaut loses orientation during EVA. AURA's spatial mapping provides real-time navigation cues, biometric monitoring ensures stress doesn't impair judgment.
@@ -1065,7 +1065,7 @@ export default function Home() {
       </section>
 
       {/* Earth Impact Scenarios Section */}
-      <section className="py-20 px-4 bg-slate-800">
+      <section className="py-20 px-4 bg-[#0B192C]">
         <div className="max-w-6xl mx-auto">
           <h2 className="text-4xl md:text-5xl font-bold text-center mb-12">Earth Applications: AURA Beyond Space</h2>
           <p className="text-lg md:text-xl text-center mb-12 text-gray-300">
@@ -1074,21 +1074,21 @@ export default function Home() {
 
           <div className="space-y-12">
             {/* Sovereign AI Brain */}
-            <div className="bg-slate-700 p-8 rounded-lg">
-              <h3 className="text-2xl font-semibold mb-6 text-blue-400 flex items-center">
+            <div className="bg-[#1E3E62] p-8 rounded-lg">
+              <h3 className="text-2xl font-semibold mb-6 text-[#FF6500] flex items-center">
                 <Brain className="w-8 h-8 mr-3" />
                 Sovereign AI Brain: Predictive Intelligence at Scale
               </h3>
               <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
-                <div className="bg-slate-600 p-4 rounded">
+                <div className="bg-[#1E3E62] p-4 rounded">
                   <h4 className="font-semibold mb-2 text-blue-300">Predictive Maintenance</h4>
                   <p className="text-sm text-gray-300">Ingest continuous sensor streams from industrial machinery (turbines, assembly lines, fleet vehicles) to forecast failures weeks in advance, schedule service, and minimize unplanned downtime.</p>
                 </div>
-                <div className="bg-slate-600 p-4 rounded">
+                <div className="bg-[#1E3E62] p-4 rounded">
                   <h4 className="font-semibold mb-2 text-blue-300">Smart Grid Optimization</h4>
                   <p className="text-sm text-gray-300">Monitor power generation/transmission networks in real time, predict load swings and equipment stress, and autonomously re-route power or dispatch repair crews.</p>
                 </div>
-                <div className="bg-slate-600 p-4 rounded">
+                <div className="bg-[#1E3E62] p-4 rounded">
                   <h4 className="font-semibold mb-2 text-blue-300">Supply-Chain Resilience</h4>
                   <p className="text-sm text-gray-300">Fuse logistics, weather, geopolitical, and production data to anticipate disruptions, re-optimize routes and inventory levels, and trigger contingency plans.</p>
                 </div>
@@ -1096,21 +1096,21 @@ export default function Home() {
             </div>
 
             {/* Adaptive Contingency Engineering (ACE) */}
-            <div className="bg-slate-700 p-8 rounded-lg">
+            <div className="bg-[#1E3E62] p-8 rounded-lg">
               <h3 className="text-2xl font-semibold mb-6 text-yellow-400 flex items-center">
                 <Wrench className="w-8 h-8 mr-3" />
                 Adaptive Contingency Engineering (ACE): On-Demand Manufacturing
               </h3>
               <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
-                <div className="bg-slate-600 p-4 rounded">
+                <div className="bg-[#1E3E62] p-4 rounded">
                   <h4 className="font-semibold mb-2 text-yellow-300">Remote Facility Fabrication</h4>
                   <p className="text-sm text-gray-300">Deploy compact DED/FFF units at oil rigs, Antarctic stations, or military forward operating bases to print replacement valves, brackets, or fittings from PEEK, PEKK, or aerospace-grade metal alloys.</p>
                 </div>
-                <div className="bg-slate-600 p-4 rounded">
+                <div className="bg-[#1E3E62] p-4 rounded">
                   <h4 className="font-semibold mb-2 text-yellow-300">Rapid R&D Prototyping</h4>
                   <p className="text-sm text-gray-300">Use generative design with physics-informed neural nets to produce topology-optimized jigs, tooling, or structural prototypes in hours rather than weeks.</p>
                 </div>
-                <div className="bg-slate-600 p-4 rounded">
+                <div className="bg-[#1E3E62] p-4 rounded">
                   <h4 className="font-semibold mb-2 text-yellow-300">Critical Infrastructure Repair</h4>
                   <p className="text-sm text-gray-300">Embed portable WAAM/DLP printers into rail-maintenance vehicles or utility trucks to rebuild worn rails, pipe joints, or conductor clamps on site.</p>
                 </div>
@@ -1118,21 +1118,21 @@ export default function Home() {
             </div>
 
             {/* Biometric Monitoring */}
-            <div className="bg-slate-700 p-8 rounded-lg">
+            <div className="bg-[#1E3E62] p-8 rounded-lg">
               <h3 className="text-2xl font-semibold mb-6 text-red-400 flex items-center">
                 <Heart className="w-8 h-8 mr-3" />
                 Biometric Monitoring: Human-Centric Intelligence
               </h3>
               <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
-                <div className="bg-slate-600 p-4 rounded">
+                <div className="bg-[#1E3E62] p-4 rounded">
                   <h4 className="font-semibold mb-2 text-red-300">High-Risk Workforce Safety</h4>
                   <p className="text-sm text-gray-300">Continuous physiological and environmental monitoring (heart rate variability, core temperature, toxic gas exposure) for firefighters, miners, or offshore-platform workers, with AI-driven fatigue and heat-stress alerts.</p>
                 </div>
-                <div className="bg-slate-600 p-4 rounded">
+                <div className="bg-[#1E3E62] p-4 rounded">
                   <h4 className="font-semibold mb-2 text-red-300">Elite Athlete Performance</h4>
                   <p className="text-sm text-gray-300">Real-time analysis of biometrics and movement patterns to optimize training loads, prevent overuse injuries, and tailor recovery protocols.</p>
                 </div>
-                <div className="bg-slate-600 p-4 rounded">
+                <div className="bg-[#1E3E62] p-4 rounded">
                   <h4 className="font-semibold mb-2 text-red-300">Tele-Medicine Augmentation</h4>
                   <p className="text-sm text-gray-300">In remote clinics, integrate wearable vital-sign trackers with AI triage to guide non-expert operators, escalate care early, and advise surgeons via AR overlays.</p>
                 </div>
@@ -1140,21 +1140,21 @@ export default function Home() {
             </div>
 
             {/* Mission Data Fusion */}
-            <div className="bg-slate-700 p-8 rounded-lg">
+            <div className="bg-[#1E3E62] p-8 rounded-lg">
               <h3 className="text-2xl font-semibold mb-6 text-purple-400 flex items-center">
                 <Eye className="w-8 h-8 mr-3" />
                 Mission Data Fusion: Unified Intelligence Systems
               </h3>
               <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
-                <div className="bg-slate-600 p-4 rounded">
+                <div className="bg-[#1E3E62] p-4 rounded">
                   <h4 className="font-semibold mb-2 text-purple-300">Smart Cities & Traffic</h4>
                   <p className="text-sm text-gray-300">Fuse CCTV, vehicle-GPS, public transit, weather, and social-media signals to predict congestion hotspots, optimize traffic-signal timing, and dynamically reroute emergency vehicles.</p>
                 </div>
-                <div className="bg-slate-600 p-4 rounded">
+                <div className="bg-[#1E3E62] p-4 rounded">
                   <h4 className="font-semibold mb-2 text-purple-300">Critical Facility Monitoring</h4>
                   <p className="text-sm text-gray-300">Integrate building-management, fire-alarm, seismic, and cybersecurity sensors to detect anomalies, coordinate automated lockdowns or fire-suppression, and provide unified situational awareness.</p>
                 </div>
-                <div className="bg-slate-600 p-4 rounded">
+                <div className="bg-[#1E3E62] p-4 rounded">
                   <h4 className="font-semibold mb-2 text-purple-300">Environmental Surveillance</h4>
                   <p className="text-sm text-gray-300">Combine satellite imagery, IoT air/water sensors, climate forecasts, and health data to pinpoint emerging pollution events or disease outbreaks and guide field-response teams.</p>
                 </div>

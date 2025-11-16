@@ -1,232 +1,220 @@
-# AURA AI - EVA Procedure Assistant Website
+# AURA AI Model - EVA Procedures AI System
 
-A professional web interface for the AURA AI EVA Procedure Assistant, featuring secure API integration and modern web design.
+<img width="3615" height="2475" alt="AURAAI" src="https://github.com/user-attachments/assets/62ab1a3f-37ae-43e3-bdd8-2db8ed03a661" />
+<img width="1103" height="1248" alt="Tinker Training" src="https://github.com/user-attachments/assets/4f20628b-16ed-4643-b3d9-112508bc3748" />
 
-## 🚀 Features
 
-- **Professional Space-Themed UI**: Modern design with NASA-inspired aesthetics
-- **Secure API Integration**: Vercel serverless functions keep API keys protected
-- **Interactive Demo**: Real-time EVA procedure guidance
-- **Responsive Design**: Works on all devices
-- **Fast Performance**: Optimized for quick response times
+AURA (Autonomous Unit for Response Analysis) is a specialized AI system designed for EVA (Extra-Vehicular Activity) procedures using tinker-cookbook for fine-tuning language models.
 
-## 🛡️ Security & API Integration
+## Overview
 
-### How API Keys Are Protected
+This system provides:
+- **Fine-tuned EVA procedures model** specialized for space suit operations and emergency protocols
+- **RAG (Retrieval-Augmented Generation)** for dynamic access to EVA procedure databases
+- **Multi-model comparison** between fine-tuned, base, and RAG-enhanced models
+- **FastAPI web server** with interactive interface
 
-**🔐 Secure Architecture:**
-- API keys are stored as Vercel environment variables (never in client code)
-- Serverless functions handle all API calls server-side
-- Client-side code only receives responses, never credentials
-- Rate limiting prevents abuse
-- CORS properly configured
+## Features
 
-**🌐 Deployment Security:**
-- Vercel environment variables are encrypted and secure
-- No API keys exposed in GitHub repository
-- Automatic HTTPS encryption
-- DDoS protection via Vercel infrastructure
+- 🎯 **Domain-Specific Training**: Specialized for EVA procedures and space operations
+- 🔍 **RAG Integration**: Dynamic retrieval of relevant procedure information
+- 🌐 **Web Interface**: RESTful API with interactive testing capabilities
+- 📊 **Model Comparison**: Compare fine-tuned vs base vs RAG-enhanced responses
+- ⚡ **Optimized Inference**: Streamlined response generation with proper tokenization
 
-## 📋 Prerequisites
+## Installation
 
-- Node.js 18+
-- Vercel CLI (optional, for local testing)
-- GitHub account
-
-## 🚀 Quick Start
-
-### 1. Clone and Install
-
+1. Install the package in development mode:
 ```bash
-git clone https://github.com/DSeahYS/AURA-AI-Website.git
-cd AURA-AI-Website
-npm install
+pip install -e .
 ```
 
-### 2. Local Development
-
+2. Set up environment variables:
 ```bash
-npm run dev
-```
-
-Visit `http://localhost:3000` to see the website.
-
-### 3. Vercel Deployment
-
-#### Connect to GitHub
-1. Push this code to your GitHub repository
-2. Go to [vercel.com](https://vercel.com) and sign in
-3. Click "New Project"
-4. Import your GitHub repository
-
-#### Configure Environment Variables
-In your Vercel project settings, add these environment variables:
-
-```
+# Required
 TINKER_API_KEY=your_tinker_api_key_here
-MODEL_PATH=tinker://your_model_path_here
+
+# Optional (for OpenRouter comparison)
+OPENROUTER_API_KEY=your_openrouter_api_key_here
 ```
 
-**Important:** Never commit API keys to GitHub. Always use Vercel environment variables.
+## Usage
 
-#### Deploy
-Vercel will automatically deploy your website. The URL will be something like:
-`https://aura-ai-website.vercel.app`
+### Running the Server
 
-## 🔧 Configuration
-
-### Environment Variables
-
-| Variable | Description | Required |
-|----------|-------------|----------|
-| `TINKER_API_KEY` | Your Tinker API key | Yes |
-| `MODEL_PATH` | Path to your trained AURA model | Yes |
-
-### API Endpoints
-
-- `POST /api/query` - Get EVA procedure guidance
-  - Body: `{"query": "your EVA question"}`
-  - Response: `{"procedure": "detailed response", "timestamp": "ISO date"}`
-
-## 🏗️ Project Structure
-
-```
-AuraAIWebsite/
-├── index.html          # Main website
-├── styles.css          # Styling
-├── script.js           # Client-side JavaScript
-├── api/
-│   └── query.js        # Vercel serverless function
-├── vercel.json         # Vercel configuration
-├── package.json        # Dependencies
-└── README.md          # This file
-```
-
-## 🔒 Security Best Practices
-
-### API Key Protection
-- ✅ Store keys in Vercel environment variables only
-- ✅ Never commit keys to Git repository
-- ✅ Use different keys for development/production
-- ✅ Rotate keys regularly
-
-### Rate Limiting
-- ✅ 10 requests per minute per IP
-- ✅ Automatic blocking of abuse
-- ✅ Request logging for monitoring
-
-### CORS Configuration
-- ✅ Properly configured for security
-- ✅ Allows necessary origins only
-- ✅ Prevents unauthorized access
-
-## 🧪 Testing
-
-### Local Testing
 ```bash
-npm run dev
+# Method 1: Direct Python execution
+python server.py
+
+# Method 2: Using uvicorn
+uvicorn server:app --host 0.0.0.0 --port 5001
+
+# Method 3: After package installation
+aura-server
 ```
 
-Visit `http://localhost:3000` to see the comparison interface.
+### Training the Model
 
-### API Testing
 ```bash
-# Test AURA API
-curl -X POST http://localhost:5000/api/query \
-  -H "Content-Type: application/json" \
-  -d '{"query": "Emergency: suit pressure below 3.0 psi"}'
+# Method 1: Direct Python execution
+python train.py
 
-# Test OpenRouter API
-curl -X POST http://localhost:5000/api/openrouter \
-  -H "Content-Type: application/json" \
-  -d '{"query": "What are emergency procedures?"}'
+# Method 2: After package installation
+aura-train
 ```
 
-## 🧪 **AI Model Comparison Demo**
+### Testing Inference
 
-**The Problem: A Life-Critical, Real-Time System**
+```bash
+# Method 1: Direct Python execution
+python inference.py
 
-Your AURA paper defines a system that must do three things:
-- **Be Sovereign**: Work with zero connection to Earth due to communication latency
-- **Be Instantaneous**: Part of a "sense-decide-act loop" under 100 milliseconds
-- **Be a "Symbiote"**: An "active, intelligent partner" fusing live biometric/suit data
+# Method 2: After package installation
+aura-infer
+```
 
-### **Three AI Models Compared:**
+## API Endpoints
 
-| Feature | Vanilla LLM (Tourist) | RAG (Librarian) | Fine-Tuned (Partner) |
-|---------|----------------------|-----------------|---------------------|
-| **Domain Knowledge** | ❌ None | ✅ Has the book | ✅ Is the book |
-| **Inference Speed** | Fast | ❌ Slow (Must search) | ✅ Instant (Reflex) |
-| **Context Window** | ✅ Free | ❌ Clogged (Full of PDF) | ✅ Free (Ready for sensor data) |
-| **Role** | Ignorant | Passive Tool | Active Symbiote |
+### Core Inference
+- `POST /api/query` - AURA fine-tuned model inference
+- `POST /api/openrouter` - OpenRouter base model
+- `POST /api/openrouter-rag` - OpenRouter with RAG enhancement
 
-**🎯 AURA AI (Fine-tuned)** - Your crewmate who has memorized the EVA manual
-**📚 Vanilla RAG** - Librarian who must search the manual each time
-**🤖 Base Llama Model** - Tourist with no local knowledge
+### Data and Model Management
+- `GET /` - Web interface
+- `GET /api/data-summary` - Summary of training data
+- `GET /api/models-comparison` - Model capabilities comparison
 
-### **Real-Time Metrics:**
-- Response time in milliseconds
-- Context token usage (input tokens)
-- Full response text (scrollable after 5 lines)
-- Performance comparison summary
+## Project Structure
 
-## 📚 Usage Examples
+```
+AuraAIModel Working (Copy)/
+├── aura_ai/                    # Main package
+│   ├── __init__.py            # Package initialization
+│   ├── inference.py           # Inference logic with improved decoding
+│   ├── server.py              # FastAPI server with RAG functionality
+│   └── train.py               # Training pipeline using tinker primitives
+├── data/                       # Training data
+│   ├── FullProcedures.md      # EVA procedures database
+│   └── SmallData.md           # Additional procedure data
+├── model/                      # Model artifacts
+│   ├── model_path.txt         # Path to trained model
+│   ├── metrics.json           # Training metrics
+│   └── samples.txt            # Sample outputs
+├── ui/                         # Web interface (static files)
+├── .env                        # Environment variables
+├── .gitignore                  
+├── pyproject.toml             # Package configuration
+├── server.py                  # Server entry point
+├── train.py                   # Training entry point
+└── README.md                  # This file
+```
 
-### Emergency Procedures
-- "Emergency: suit pressure below 3.0 psi"
-- "Communication failure - what do I do?"
-- "Airlock malfunction during EVA"
+## Key Improvements Made
 
-### Operational Procedures
-- "Pre-EVA suit check checklist"
-- "Tool handling procedures"
-- "Sample collection protocols"
+### ✅ Simplified Response Decoding
+- **Before**: Complex multi-level fallback logic with try/catch blocks
+- **After**: Clean, readable `extract_and_decode_response()` function
+- **Result**: More maintainable and predictable response handling
 
-## 🤝 Contributing
+### ✅ Proper Package Structure
+- **Before**: Flat file structure with direct imports
+- **After**: Organized `aura_ai` package with proper entry points
+- **Result**: Professional packaging following Python best practices
 
-1. Fork the repository
-2. Create a feature branch
-3. Make your changes
-4. Test thoroughly
-5. Submit a pull request
+### ✅ Clean Integration with tinker-cookbook
+- **Confirmed**: Correct tokenizer import path (`tinker_cookbook.tokenizer_utils`)
+- **Enhanced**: Proper use of tinker primitives and tinker-cookbook utilities
+- **Result**: Seamless integration with the documented workflow
 
-## 📄 License
+## Recent Fixes: Token Cutoff Resolution
 
-MIT License - see LICENSE file for details.
+### Token Cutoff Issue
+The system previously experienced response truncation due to Tinker's sampling limitations and insufficient token allocation.
 
-## 🆘 Support
+### Resolution
+- **Increased max_tokens**: Default raised from 100 to 2000 tokens for complete responses
+- **Enhanced Sampling Parameters**: Added temperature (0.7), top_p (0.9), top_k (50), and stop sequences for better generation control
+- **Prompt Format Fix**: Changed from "AURA Query:/AURA Procedure:" to "Input:/Output:" for consistency
+- **Model Path Loading**: Fixed issues with model path resolution for reliable loading
 
-For issues or questions:
-- Create an issue on GitHub
-- Check the troubleshooting section below
+### Tinker Sampling Limit Workaround
+To work around Tinker's sampling constraints, the system now uses optimized sampling parameters and increased token limits to ensure full procedure generation.
 
-## 🔧 Troubleshooting
+### Current Capabilities and Limits
+- **Max Output Tokens**: 2000 (configurable)
+- **Supported Sampling**: temperature, top_p, top_k, stop sequences
+- **Model**: Fine-tuned Llama-3.1-8B-Instruct for EVA procedures
+- **Response Format**: Structured Input/Output pairs
+
+## Training Data
+
+The system trains on EVA procedures data including:
+- Emergency protocols (suit pressure, communications loss)
+- Pre-EVA checklists (airlock depressurization)
+- Standard operational procedures
+- Safety protocols and risk assessments
+
+## Model Architecture
+
+- **Base Model**: meta-llama/Llama-3.1-8B-Instruct
+- **Fine-tuning Method**: LoRA (Low-Rank Adaptation) with rank=32
+- **Training Framework**: tinker service with distributed training
+- **Data Format**: Input/Output pairs with proper tokenization
+
+## Configuration
+
+### Hyperparameters
+- **Learning Rate**: 0.0001
+- **Batch Size**: 2
+- **Epochs**: 5
+- **LoRA Rank**: 32
+
+### Tokenization
+- **Tokenizer**: AutoTokenizer from transformers
+- **Context Handling**: Proper loss masking for prompt vs response tokens
+- **Max Tokens**: Configurable per request (default: 2000)
+
+## Troubleshooting
 
 ### Common Issues
 
-**API Key Not Working:**
-- Verify environment variables are set in Vercel
-- Check that keys are not expired
-- Ensure correct key format
+1. **Import Errors**: Ensure tinker-cookbook is properly installed
+   ```bash
+   pip install -e ../AURA\ Tinker
+   ```
 
-**Website Not Loading:**
-- Check Vercel deployment status
-- Verify build configuration
-- Check browser console for errors
+2. **API Key Issues**: Verify environment variables are set
+   ```bash
+   echo $TINKER_API_KEY
+   echo $OPENROUTER_API_KEY
+   ```
 
-**Slow Responses:**
-- This is normal for AI model inference
-- Responses typically take 2-5 seconds
-- Check your internet connection
+3. **Model Loading**: Check that `model/model_path.txt` contains valid path
+   ```bash
+   cat model/model_path.txt
+   ```
 
-## 🎯 Future Enhancements
+## Development
 
-- [ ] Voice input for hands-free operation
-- [ ] Multi-language support
-- [ ] Advanced procedure search
-- [ ] Integration with astronaut training systems
-- [ ] Real-time collaboration features
+### Code Style
+- **Linting**: ruff (configured in pyproject.toml)
+- **Formatting**: black (100 character line length)
+- **Type Checking**: mypy (strict configuration)
+
+### Testing
+```bash
+# Run tests
+pytest
+
+# Run with coverage
+pytest --cov=aura_ai
+```
+
+## License
+
+This project is part of the AURA space operations AI system.
 
 ---
 
-**Built with ❤️ for space exploration safety**
+**Built with ❤️ using tinker-cookbook and tinker**

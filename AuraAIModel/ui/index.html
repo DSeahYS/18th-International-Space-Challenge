@@ -3,56 +3,222 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>AURA EVA Procedure Assistant</title>
-    <link rel="stylesheet" href="/static/styles.css">
+    <title>AURA AI System - EVA Procedures Intelligence</title>
+    <link rel="stylesheet" href="styles.css">
+    <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;700;900&family=Rajdhani:wght@300;400;600;700&display=swap" rel="stylesheet">
 </head>
 <body>
-    <header>
-        <div class="header-content">
-            <h1>AURA vs OpenRouter Comparison</h1>
-        </div>
-    </header>
+    <div class="container">
+        <!-- Header -->
+        <header class="header">
+            <div class="logo-section">
+                <h1 class="logo">AURA</h1>
+                <p class="subtitle">Autonomous Unit for Response Analysis</p>
+            </div>
+            <div class="system-status">
+                <div class="status-indicator active"></div>
+                <span class="status-text">System Online</span>
+            </div>
+        </header>
 
-    <main>
-        <div class="comparison-container">
-            <div class="model-section aura-section">
-                <h2>AURA Fine-tuned Model</h2>
-                <div class="input-section">
-                    <label for="aura-query-input">Enter your EVA procedure query:</label>
-                    <textarea id="aura-query-input" placeholder="e.g., How to perform emergency depressurization procedure?" rows="4"></textarea>
-                    <button id="aura-submit-btn" class="submit-btn">Submit Query</button>
-                </div>
-
-                <div class="response-section">
-                    <div class="timing">Response Time: <span id="aura-timing">-- ms</span></div>
-                    <div id="aura-response-display" class="response-display">
-                        <p class="placeholder">Your response will appear here...</p>
+        <!-- Main Interface -->
+        <main class="main-content">
+            <!-- Query Input Section -->
+            <section class="query-section">
+                <h2 class="section-title">EVA Query Interface</h2>
+                <div class="query-input-container">
+                    <textarea 
+                        id="queryInput" 
+                        placeholder="Enter your EVA procedure question... (e.g., Emergency: suit pressure below 3.0 psi-immediate actions?)"
+                        class="query-input"
+                    ></textarea>
+                    <div class="query-actions">
+                        <button id="clearBtn" class="btn btn-secondary">Clear</button>
+                        <button id="submitBtn" class="btn btn-primary">Test All Models</button>
                     </div>
                 </div>
-            </div>
+            </section>
 
-            <div class="model-section openrouter-section">
-                <h2>OpenRouter Base Model</h2>
-                <div class="input-section">
-                    <label for="openrouter-query-input">Enter your EVA procedure query:</label>
-                    <textarea id="openrouter-query-input" placeholder="e.g., How to perform emergency depressurization procedure?" rows="4"></textarea>
-                    <button id="openrouter-submit-btn" class="submit-btn">Submit Query</button>
+            <!-- Example Questions -->
+            <section class="examples-section">
+                <h3 class="subsection-title">Quick Examples</h3>
+                <div class="example-grid">
+                    <button class="example-btn" data-query="Emergency: suit pressure below 3.0 psi-immediate actions?">
+                        🚨 Suit Pressure Emergency
+                    </button>
+                    <button class="example-btn" data-query="Pre-EVA: full airlock depressurization checklist">
+                        ⚙️ Pre-EVA Checklist
+                    </button>
+                    <button class="example-btn" data-query="Comms lost: no response on primary and backup-what now?">
+                        📡 Communication Loss
+                    </button>
+                    <button class="example-btn" data-query="Emergency oxygen supply critical level procedures">
+                        🫁 Oxygen Emergency
+                    </button>
+                    <button class="example-btn" data-query="Lunar surface navigation waypoint markers">
+                        🌙 Surface Navigation
+                    </button>
+                    <button class="example-btn" data-query="Space suit thermal regulation system malfunction">
+                        🌡️ Thermal Emergency
+                    </button>
                 </div>
+            </section>
 
-                <div class="response-section">
-                    <div class="timing">Response Time: <span id="openrouter-timing">-- ms</span></div>
-                    <div id="openrouter-response-display" class="response-display">
-                        <p class="placeholder">Your response will appear here...</p>
+            <!-- Individual Model Testing -->
+            <section class="individual-testing">
+                <h3 class="section-title">Individual Model Testing</h3>
+                <div class="model-buttons">
+                    <button id="auraBtn" class="btn btn-aura">Test AURA Fine-tuned</button>
+                    <button id="baseBtn" class="btn btn-base">Test Base Llama</button>
+                    <button id="ragBtn" class="btn btn-rag">Test RAG Enhanced</button>
+                </div>
+            </section>
+
+            <!-- Results Section -->
+            <section class="results-section">
+                <h3 class="section-title">Model Results</h3>
+                <div class="results-grid">
+                    <!-- AURA Results -->
+                    <div class="result-card" id="auraResult">
+                        <div class="result-header">
+                            <h4 class="model-name">AURA Fine-tuned</h4>
+                            <div class="result-status">
+                                <div class="token-info">
+                                    <span class="context-tokens" id="auraContextTokens">- ctx</span>
+                                    <span class="output-tokens" id="auraOutputTokens">- out</span>
+                                </div>
+                                <span class="response-time" id="auraTime">- ms</span>
+                            </div>
+                        </div>
+                        <div class="result-content" id="auraContent">
+                            <p class="placeholder">Submit a query to see AURA's response...</p>
+                        </div>
+                    </div>
+
+                    <!-- Base Model Results -->
+                    <div class="result-card" id="baseResult">
+                        <div class="result-header">
+                            <h4 class="model-name">OpenRouter Base</h4>
+                            <div class="result-status">
+                                <div class="token-info">
+                                    <span class="context-tokens" id="baseContextTokens">- ctx</span>
+                                    <span class="output-tokens" id="baseOutputTokens">- out</span>
+                                </div>
+                                <span class="response-time" id="baseTime">- ms</span>
+                            </div>
+                        </div>
+                        <div class="result-content" id="baseContent">
+                            <p class="placeholder">Submit a query to see Base model response...</p>
+                        </div>
+                    </div>
+
+                    <!-- RAG Results -->
+                    <div class="result-card" id="ragResult">
+                        <div class="result-header">
+                            <h4 class="model-name">RAG Enhanced</h4>
+                            <div class="result-status">
+                                <div class="token-info">
+                                    <span class="context-tokens" id="ragContextTokens">- ctx</span>
+                                    <span class="output-tokens" id="ragOutputTokens">- out</span>
+                                </div>
+                                <span class="response-time" id="ragTime">- ms</span>
+                            </div>
+                        </div>
+                        <div class="result-content" id="ragContent">
+                            <p class="placeholder">Submit a query to see RAG response...</p>
+                        </div>
                     </div>
                 </div>
-            </div>
-        </div>
-    </main>
+            </section>
 
-    <footer>
-        <p>&copy; 2024 AURA EVA Procedure Assistant</p>
-    </footer>
+            <!-- Performance Metrics -->
+            <section class="metrics-section">
+                <h3 class="section-title">Performance Metrics</h3>
+                <div class="metrics-grid">
+                    <div class="metric-card">
+                        <h4 class="metric-title">Token Efficiency</h4>
+                        <div class="metric-content">
+                            <div class="efficiency-bar">
+                                <div class="bar aura-bar" style="width: 95%"></div>
+                                <div class="bar base-bar" style="width: 65%"></div>
+                                <div class="bar rag-bar" style="width: 35%"></div>
+                            </div>
+                            <div class="efficiency-labels">
+                                <span class="label aura-label">AURA (116)</span>
+                                <span class="label base-label">Base (324)</span>
+                                <span class="label rag-label">RAG (2137)</span>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="metric-card">
+                        <h4 class="metric-title">Specialization Level</h4>
+                        <div class="metric-content">
+                            <div class="specialization-bars">
+                                <div class="spec-item">
+                                    <span class="spec-label">AURA</span>
+                                    <div class="spec-bar">
+                                        <div class="spec-fill aura-spec" style="width: 95%"></div>
+                                    </div>
+                                    <span class="spec-percent">95%</span>
+                                </div>
+                                <div class="spec-item">
+                                    <span class="spec-label">Base</span>
+                                    <div class="spec-bar">
+                                        <div class="spec-fill base-spec" style="width: 30%"></div>
+                                    </div>
+                                    <span class="spec-percent">30%</span>
+                                </div>
+                                <div class="spec-item">
+                                    <span class="spec-label">RAG</span>
+                                    <div class="spec-bar">
+                                        <div class="spec-fill rag-spec" style="width: 80%"></div>
+                                    </div>
+                                    <span class="spec-percent">80%</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
 
-    <script src="/static/script.js"></script>
+                    <div class="metric-card">
+                        <h4 class="metric-title">Response Accuracy</h4>
+                        <div class="metric-content">
+                            <div class="accuracy-display">
+                                <div class="accuracy-item">
+                                    <div class="accuracy-icon aura-icon">🎯</div>
+                                    <div class="accuracy-info">
+                                        <span class="accuracy-name">AURA</span>
+                                        <span class="accuracy-value">95%+</span>
+                                    </div>
+                                </div>
+                                <div class="accuracy-item">
+                                    <div class="accuracy-icon base-icon">🌍</div>
+                                    <div class="accuracy-info">
+                                        <span class="accuracy-name">Base</span>
+                                        <span class="accuracy-value">75%</span>
+                                    </div>
+                                </div>
+                                <div class="accuracy-item">
+                                    <div class="accuracy-icon rag-icon">🔍</div>
+                                    <div class="accuracy-info">
+                                        <span class="accuracy-name">RAG</span>
+                                        <span class="accuracy-value">88%</span>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+        </main>
+    </div>
+
+    <!-- Loading Overlay -->
+    <div class="loading-overlay" id="loadingOverlay">
+        <div class="loading-spinner"></div>
+        <div class="loading-text">Processing query...</div>
+    </div>
+
+    <script src="script.js"></script>
 </body>
 </html>

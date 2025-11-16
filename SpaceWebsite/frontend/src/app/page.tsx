@@ -627,7 +627,7 @@ export default function Home() {
 
             <div className="flowchart-zoom-container overflow-hidden">
               <Image
-                src="/Images/AURA Overall.png"
+                src="/images/AURA Overall.png"
                 alt="AURA Overall System Architecture"
                 width={1200}
                 height={800}
@@ -924,7 +924,7 @@ export default function Home() {
       </section>
 
       {/* Partnerships & Testimonials Section */}
-      <section className="py-20 px-4 bg-[#0B192C]">
+      <section className="py-20 px-4 bg-[#0B192C] hidden">
         <div className="max-w-6xl mx-auto">
           <h2 className="text-4xl md:text-5xl font-bold text-center mb-12">Trusted by Industry Leaders</h2>
 

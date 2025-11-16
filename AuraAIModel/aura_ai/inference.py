@@ -12,7 +12,8 @@ def load_model_path():
     """Load the model path from model/model_path.txt"""
     try:
         script_dir = os.path.dirname(os.path.abspath(__file__))
-        model_path_file = os.path.join(script_dir, "model", "model_path.txt")
+        project_root = os.path.dirname(script_dir)  # Go up one level to project root
+        model_path_file = os.path.join(project_root, "model", "model_path.txt")
         with open(model_path_file, "r", encoding="utf-8") as f:
             model_path = f.read().strip()
         logger.info(f"Loaded model path: {model_path}")

@@ -1,0 +1,64 @@
+[project]
+name = "aura-ai-model"
+version = "1.0.0"
+description = "AURA (Autonomous Unit for Response Analysis) - EVA Procedures AI System"
+readme = "README.md"
+authors = [
+    { name = "AURA Development Team", email = "dev@aura-system.ai" },
+]
+requires-python = ">=3.11"
+dependencies = [
+    "tinker>=0.2.2",
+    "tinker-cookbook>=0.1.0",
+    "fastapi>=0.118.0",
+    "uvicorn[standard]>=0.37.0",
+    "python-dotenv>=1.0.0",
+    "httpx>=0.28.1",
+    "python-multipart>=0.0.6",
+    "pydantic>=2.11.0",
+]
+
+[project.optional-dependencies]
+dev = [
+    "pytest>=8.0.0",
+    "pytest-asyncio>=0.24.0",
+    "ruff>=0.5.0",
+    "mypy>=1.10.0",
+    "black>=24.0.0",
+]
+web = [
+    "fastapi[all]>=0.118.0",
+    "streamlit>=1.35.0",
+    "gradio>=4.35.0",
+]
+
+[project.scripts]
+aura-server = "aura_ai.server:main"
+aura-train = "aura_ai.train:main"
+aura-infer = "aura_ai.inference:main"
+
+[project.urls]
+Homepage = "https://aura-system.ai"
+Repository = "https://github.com/aura-system/ai-model"
+Documentation = "https://docs.aura-system.ai"
+
+[build-system]
+requires = ["hatchling"]
+build-backend = "hatchling.build"
+
+[tool.hatch.build.targets.wheel]
+packages = ["aura_ai"]
+
+[tool.ruff]
+line-length = 100
+target-version = "py311"
+
+[tool.black]
+line-length = 100
+target-version = ['py311']
+
+[tool.mypy]
+python_version = "3.11"
+warn_return_any = true
+warn_unused_configs = true
+disallow_untyped_defs = true

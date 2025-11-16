@@ -27,23 +27,34 @@ tokenizer = get_tokenizer()  # Load the real tokenizer
 # Set up FastAPI app
 app = FastAPI()
 
-# Mount static files with cache control headers
+# Mount static files with cache control headers (only if ui directory exists)
 from fastapi.responses import Response
 from starlette.staticfiles import StaticFiles as StarletteStaticFiles
 
 class NoCacheStaticFiles(StarletteStaticFiles):
     def __init__(self, *args, **kwargs):
-        super().__init__(*args, **kwargs)
+        try:
+            super().__init__(*args, **kwargs)
+        except RuntimeError:
+            # Directory doesn't exist, skip mounting
+            pass
     
     async def get_response(self, path: str, scope):
-        response = await super().get_response(path, scope)
-        # Add cache-busting headers
-        response.headers["Cache-Control"] = "no-cache, no-store, must-revalidate"
-        response.headers["Pragma"] = "no-cache"
-        response.headers["Expires"] = "0"
-        return response
+        try:
+            response = await super().get_response(path, scope)
+            # Add cache-busting headers
+            response.headers["Cache-Control"] = "no-cache, no-store, must-revalidate"
+            response.headers["Pragma"] = "no-cache"
+            response.headers["Expires"] = "0"
+            return response
+        except Exception:
+            from fastapi.responses import JSONResponse
+            return JSONResponse({"error": "Static files not available"}, status_code=404)
 
-app.mount("/static", NoCacheStaticFiles(directory=os.path.join(os.path.dirname(__file__), "ui")), name="static")
+# Try to mount static files if ui directory exists
+ui_dir = os.path.join(os.path.dirname(__file__), "..", "ui")
+if os.path.exists(ui_dir):
+    app.mount("/static", NoCacheStaticFiles(directory=ui_dir), name="static")
 
 # Add CORS middleware
 app.add_middleware(
@@ -58,11 +69,32 @@ app.add_middleware(
 logging.basicConfig(level=logging.INFO, format='%(asctime)s - %(levelname)s - %(message)s')
 logger = logging.getLogger(__name__)
 
+# Root endpoint - serve HTML if available, otherwise JSON API info
+@app.get("/")
+async def root():
+    html_path = os.path.join(os.path.dirname(__file__), "..", "ui", "index.html")
+    if os.path.exists(html_path):
+        return FileResponse(html_path, media_type="text/html")
+    else:
+        # Fallback to API info if HTML file doesn't exist
+        return {
+            "message": "AURA AI System is running!",
+            "version": "1.0.0",
+            "endpoints": {
+                "inference": "/api/query",
+                "openrouter": "/api/openrouter", 
+                "openrouter_rag": "/api/openrouter-rag",
+                "data_summary": "/api/data-summary",
+                "models_comparison": "/api/models-comparison"
+            },
+            "status": "API server is running but UI files not found"
+        }
+
 # RAG functionality
 def load_data_for_rag() -> str:
     """Load all data files for RAG context"""
     try:
-        data_dir = os.path.join(os.path.dirname(__file__), "data")
+        data_dir = os.path.join(os.path.dirname(__file__), "..", "data")
         combined_text = ""
         
         # Load FullProcedures.md
@@ -235,7 +267,7 @@ async def openrouter_rag_endpoint(data: dict):
 async def data_summary_endpoint():
     """Get summary of all data files for model comparison"""
     try:
-        data_dir = os.path.join(os.path.dirname(__file__), "data")
+        data_dir = os.path.join(os.path.dirname(__file__), "..", "data")
         summary = {
             "total_files": 0,
             "total_characters": 0,
@@ -336,12 +368,6 @@ async def models_comparison_endpoint():
     }
     return comparison
 
-
-
-@app.get("/")
-async def root():
-    return FileResponse(os.path.join(os.path.dirname(__file__), "ui", "index.html"), media_type="text/html")
-
 @app.post("/api/query")
 async def query_endpoint(data: dict):
     if "query" not in data:
@@ -351,18 +377,18 @@ async def query_endpoint(data: dict):
     try:
         # Count tokens in the input query
         input_tokens = len(tokenizer.encode(query))
-        
-        response = generate_response(sampling_client, tokenizer, query)
-        
+
+        response = generate_response(sampling_client, tokenizer, query, max_tokens=2000)
+
         # Count tokens in the response
         output_tokens = len(tokenizer.encode(response)) if response else 0
         total_tokens = input_tokens + output_tokens
-        
+
         return {
             "procedure": response,
             "token_usage": {
-                "prompt_tokens": input_tokens,
-                "completion_tokens": output_tokens,
+                "context_tokens": input_tokens,
+                "output_tokens": output_tokens,
                 "total_tokens": total_tokens
             }
         }
@@ -414,7 +440,3 @@ async def openrouter_endpoint(data: dict):
     except Exception as e:
         logger.error(f"Error querying OpenRouter: {e}")
         raise HTTPException(status_code=500, detail="Internal server error")
-
-if __name__ == "__main__":
-    import uvicorn
-    uvicorn.run(app, host="0.0.0.0", port=5001)

@@ -1,5 +1,9 @@
 # AURA AI Model - EVA Procedures AI System
 
+<img width="3615" height="2475" alt="AURAAI" src="https://github.com/user-attachments/assets/62ab1a3f-37ae-43e3-bdd8-2db8ed03a661" />
+<img width="1103" height="1248" alt="Tinker Training" src="https://github.com/user-attachments/assets/4f20628b-16ed-4643-b3d9-112508bc3748" />
+
+
 AURA (Autonomous Unit for Response Analysis) is a specialized AI system designed for EVA (Extra-Vehicular Activity) procedures using tinker-cookbook for fine-tuning language models.
 
 ## Overview
